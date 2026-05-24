@@ -22,3 +22,21 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Na construção civil, existe um imenso trabalho de desenho da arquitetura ANTEs de sua execução, com planos muitos detalhados. Nela também os seus artefatos são caros e      complexos, dificultando muito uma mudança em tempo real no projeto aprovado.
  - Uma diferença fundamental é a respeito ao processo de planejamento e execução de ambas arquiteturas
    - Já no planejamento e desenvolvimento de Software, os requisitos são constantemente definidos e refinados (e até removidos), exigindo agilidade que não pode ser              comparada a arquitetura da construção civil
+
+  ### Identificação de Requisitos
+   - As funções de um sistema são definidas através de um conjunto de requisitos
+   - Esses requisitos podem influenciar a arquitetura do sistema
+   - Tipos de requisito
+     - Requisitos funcionais
+     - Requisitos não-funcionais
+   - Requisitos Funcionais
+     - Define uma ação necessária do sistema
+     - Uma função é descrita através de entrada, comportamento, e saída
+     - Geralmente falta uma descrição mais detalhada do comportamento esperado das funções de sistema
+   - Requisitos Não-Funcionais
+     - Define um atributo do sistema que foi explicitamente solicitado por algum dos stakeholdes
+     - Alguns exemplos
+       - Escalabilidade
+       - Segurança
+       - Acessibilidade
+ 
