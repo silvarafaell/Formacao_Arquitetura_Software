@@ -15,3 +15,10 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Foi substituído pela norma ISO/IEC 42010
      - Mais detalhes sobre ela em https://www.iso.org/standard/74393.html
    - Embora a maior parte dos programadores realmente não ligam para essas normas, existem muitas informações interessantes nela aplicáveis em nossos projetos
+
+### Arquitetura: Construção x Software: faz sentido comparar?
+ - Pelo termo similar, é comum associarmos Arquitetura de Software a Arquitetura relacionada a construção civil
+ - Uma diferença fundamental é a respeito ao processo de planejamento e execução de ambas arquiteturas
+   - Na construção civil, existe um imenso trabalho de desenho da arquitetura ANTEs de sua execução, com planos muitos detalhados. Nela também os seus artefatos são caros e      complexos, dificultando muito uma mudança em tempo real no projeto aprovado.
+ - Uma diferença fundamental é a respeito ao processo de planejamento e execução de ambas arquiteturas
+   - Já no planejamento e desenvolvimento de Software, os requisitos são constantemente definidos e refinados (e até removidos), exigindo agilidade que não pode ser              comparada a arquitetura da construção civil
