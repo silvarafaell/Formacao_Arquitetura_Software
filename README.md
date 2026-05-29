@@ -39,4 +39,24 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
        - Escalabilidade
        - Segurança
        - Acessibilidade
+
+### Arquitetura de Software x Modelo Waterfall
+ - Upfront Architecture (Arquitetura Adiantada/Antecipada)
+   - Definição da arquitetura do sistema completa e definida antes de se iniciar o projeto
+   - Programação nesse modelo é visto como a implementação das ideias definidas em instruções de software
+ - Modelo Waterfall
+   - Datado da década de 1970, define uma sequencia de fases para o desenvolvimento de software
+   - Cada fase precisa estar complete antes de avançar para a próxima
+   - São elas:
+     - Definição de Requisitos
+     - Desenho
+     - Implementação
+     - Verificação
+     - Manutenção
+   - Falha em se adaptar a dinâmica normal de criação de softwares
+   - A maior parte dos projetos ultrapassam o orçamento e prazos, muitas vezes até entregando funcionalidades que não atendem os requisitos definidos
+   - A realidade é diferente
+     - Requisitos mudam muito rápido, muitas vezes sendo criados novos e até removidos alguns que se acreditar agregar valor no projeto
+     - Por essa razão, o modelo Waterfall não atende aos cenários modernos de software por ignorar a dinâmica do desenvolvimento de software e focar excessivamente em             planejamento. 
+
  
