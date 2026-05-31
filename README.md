@@ -59,4 +59,13 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
      - Requisitos mudam muito rápido, muitas vezes sendo criados novos e até removidos alguns que se acreditar agregar valor no projeto
      - Por essa razão, o modelo Waterfall não atende aos cenários modernos de software por ignorar a dinâmica do desenvolvimento de software e focar excessivamente em             planejamento. 
 
+### Arquitetura Emergente
+ - Quanto antes o time começar a desenvolver, mais cedo vai conseguir feedback e melhorar a qualidade do software
+ - É comum que em projetos de software se tenha arquitetura inicial, similar a outros projetos da empres, como um boilerplate
+ - A arquitetura deve suportar alterações frequentes e entrega de valor acelerada
+ - Arquitetura Emergente (ou Emerging Architecture) é o processo composto pela construção incremental do software.
+ - Apos o início, o projeto passa por diversas iterações compostas por fases do desenvolvimento de software, como desenho, implementação e teste
+ - Quando um projeto que utiliza metodologias ágeis é iniciado, apenas alguns requisitos são definidos, sendo refinados ou surgindo novos ao longo do projeto
+ - No inicio de cada iteração ou sprint os requisitos a serem implementados são definidos, e no final uma entrega de software funcional é feita
+
  
