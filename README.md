@@ -78,6 +78,9 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
      - O desenho da solução é influenciado pelo requisitos
    - Identificação e avaliação de tecnologias
      - O arquiteto deve conhecer os custos e beneficios associados a diferentes tecnologias e produtos, propondo o uso de algum(s) deles em cenários que sejam beneficios ao projeto.
+   - Formular especificações
+     - Forma de comunicar as decisões arquiteturais ao time de desenvolvimento
+     - Alguns formatos comumente utilizados são os diagramas UML, documentos de word, Wikis e etc
 
 
  
