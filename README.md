@@ -68,4 +68,16 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Quando um projeto que utiliza metodologias ágeis é iniciado, apenas alguns requisitos são definidos, sendo refinados ou surgindo novos ao longo do projeto
  - No inicio de cada iteração ou sprint os requisitos a serem implementados são definidos, e no final uma entrega de software funcional é feita
 
+### O que é Arquiteto de Software e Suas Responsabilidades
+ - Profissional responsavel por unir os requisitos e as especificações do sistema
+ - Responsavel pela arquitetura do sistema
+ - Interage com analistas de negocio e gerentes de projeto, avaliando e recomendando opções de soluções para o projeto, além de coordenar um time de programadores
+ - Principais Responsabilidades:
+   - Identificação de requisitos
+   - Divisão do sistema em componentes
+     - O desenho da solução é influenciado pelo requisitos
+   - Identificação e avaliação de tecnologias
+     - O arquiteto deve conhecer os custos e beneficios associados a diferentes tecnologias e produtos, propondo o uso de algum(s) deles em cenários que sejam beneficios ao projeto.
+
+
  
