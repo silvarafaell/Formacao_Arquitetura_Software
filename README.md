@@ -82,5 +82,14 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
      - Forma de comunicar as decisões arquiteturais ao time de desenvolvimento
      - Alguns formatos comumente utilizados são os diagramas UML, documentos de word, Wikis e etc
 
+### Mito sobre Arquiteto de Software
+ - Um grande mito existente no mercado é que o Arquiteto de Software não deveria escrever codigo
+ - Na minha opinião, arquitetos não deveriam estar em um patamar diferente dos programadores em equipes de desenvolvimento
+ - São profissionais bons e experientes, que têm grande exposição a código, e que após a definição do desenho do sistema, trabalham juntos com os programadores para garantir a implementação adequada
+ - Logo, arquitetos são programadores com amior experiência e formação
+ - No final, quanto mais experiente um programador é, mais comumente ele discuta sobre desenho da solução, boas práticas de escrita de código, escolha de ferramenta, entre outros tópicos
+ - A evolução para um perfil de Arquiteto de Software acaba sendo natual na carreira de programadores
+
+
 
  
