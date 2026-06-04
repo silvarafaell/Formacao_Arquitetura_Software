@@ -102,6 +102,11 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Interface de usuario ruim que resulta em má usabilidade e fluxos ruins para o usuario utilizar os serviços disponiveis
    - Falta de resiliencia em situações de falhas de componentes terceiros da arquitetura 
 
+### O que é "Big Ball of Mud"
+ - Software que cresce de maneira descontrolada, resultando em software que é dificil de se manter
+ - Não apresenta estrutura clara em sua maior parte, contendo diversos componentes altamente adoplados entre si, além de duplicações de código, e pouca separação de camadas e responsabilidades
+ - É comum se encontrar sistemas que foram desenvolvidos de maneira acelerada e que, apos alguns ajustes descuidados, "atendeu" o seu objetivo, se tornando um sistema legado a ser mantido e (temido)
+
 
 
 
