@@ -107,6 +107,16 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Não apresenta estrutura clara em sua maior parte, contendo diversos componentes altamente adoplados entre si, além de duplicações de código, e pouca separação de camadas e responsabilidades
  - É comum se encontrar sistemas que foram desenvolvidos de maneira acelerada e que, apos alguns ajustes descuidados, "atendeu" o seu objetivo, se tornando um sistema legado a ser mantido e (temido)
 
+### Causas da "Big Ball of Mud"
+ - A Big Ball of Mud não inicia grande causando irreversíveis ao projeto
+ - Existem algumas cauas raízes possiveis do Ball Ball of Mud
+ - Falha na identificação de requisitos
+   - O Software tem uma série de objetivos, expressados através do que o cliente quer alcançar, e quais problema quer resolver
+   - O problema aqui ocorre na transformação de requisitos expressados para funcionalidades implementadas em código.
+   - Dos objetivos de diferentes stakeholders em relação ao sistema, uma lista deve ser definida paa validação
+ - Imprecisão em estimativas
+   - A area de negocio sempre vai querer saber extamente em qual a funcinalidade vai ser entregue, focando sempre em expressoes de alto nível
+
 
 
 
