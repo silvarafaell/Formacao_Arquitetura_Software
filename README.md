@@ -90,6 +90,19 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - No final, quanto mais experiente um programador é, mais comumente ele discuta sobre desenho da solução, boas práticas de escrita de código, escolha de ferramenta, entre outros tópicos
  - A evolução para um perfil de Arquiteto de Software acaba sendo natual na carreira de programadores
 
+### O que é Sucesso em Projetos de Software
+ - Uma pergunta que parece ser simples mas ao mesmo tempo completa é: o que é sucesso em um projeto de software ?
+   - Um projeto que utiliza más práticas mas entrega as funcionalidades prometidas ?
+   - Um projeto que utiliza as melhores práticas mas com funcionalidades que não atendem o que o cliente precisa ?
+ - Um projeto de software bem-sucedido entrega uma solução funcional a necessidades do negócio
+ - Um desenho de software bem-sucedido utiliza as melhores práticas em desenho de código e arquitetura, através das tecnologias disponiveis, para entregar o projeto de software
+ - É claro que o software deve atender as necessidades do negócio, mas software de má qualidade é algo que deve ser evitado a todo custo.
+ - Software de má qualidade pode causar danos financeiros de diversas formas as empresas
+   - Paginas lentas que afastam usuarios ( antes mesmo de entrar no site)
+   - Interface de usuario ruim que resulta em má usabilidade e fluxos ruins para o usuario utilizar os serviços disponiveis
+   - Falta de resiliencia em situações de falhas de componentes terceiros da arquitetura 
+
+
 
 
  
