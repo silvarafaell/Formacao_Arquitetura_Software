@@ -116,6 +116,13 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Dos objetivos de diferentes stakeholders em relação ao sistema, uma lista deve ser definida paa validação
  - Imprecisão em estimativas
    - A area de negocio sempre vai querer saber extamente em qual a funcinalidade vai ser entregue, focando sempre em expressoes de alto nível
+ - Falta de testes
+   - Diversos niveis de testes podem existir em um projeto
+     - Testes Unitarios para verificar o comportamento de componentes individuais de código (Teste Unitário para testar o comportamento)
+     - Testes de Integração para verificar o comportamento dos componentes macros quando inseridos em um ambiente Com componentes de infraestrutura, como bancos de dados e serviços de nuvem
+     - Testes de Aceitação que validam o caminho real da aplicação, interagindo geralmente com um browser de maneira automatizada
+  - Falta de responsabilidade pelo projeto
+  - Ignorar crise no projeto
 
 
 
