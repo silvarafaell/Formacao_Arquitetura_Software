@@ -124,6 +124,15 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
   - Falta de responsabilidade pelo projeto
   - Ignorar crise no projeto
 
+### Custo de Código Bom x Ruim
+ - Embora muitos projetos sobrevivam, mesmo que muito código ruim, é inegável que os danos financeiros causados são muito grandes
+ - Nesse contexto, código ruim é mais caro que código bom.Ponto.
+ - Por mais que sair copiando e colando código pelo projeto, pular escrita de testes, falta de revisão e tudo mais, dê a impessão de aceleração do projeto, isto ocorre apenas no curto prazo.
+ - Projetos que durarem mais que o curto prazo vaõ sofrer da falta de qualidade nas atividades comuns de escrita de código
+   - Debugging
+   - Solução de bugs
+   - Manutenção e evolução de código
+ - Código que "apenas funciona" é mais barato de desenvolver, mas muito mais caro para manter e evoluir.                                                                                    
 
 
 
