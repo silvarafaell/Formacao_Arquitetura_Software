@@ -132,7 +132,23 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Debugging
    - Solução de bugs
    - Manutenção e evolução de código
- - Código que "apenas funciona" é mais barato de desenvolver, mas muito mais caro para manter e evoluir.                                                                                    
+ - Código que "apenas funciona" é mais barato de desenvolver, mas muito mais caro para manter e evoluir.            
+
+### Ferramentas de Checagem de Código
+ - Uma boa manutenção de código é alcançada através de código bem escrito. Isso inclui conhecimento de princípios de desenvolvimento, bons pradrões e práticas de projeto, testabilidade e recursos de linguagem
+ - É necessário reforçar a melhora de código de maneira contínua, não apenas noss famosos TODOs (que estão mais para "TODO sempre")
+ - Para isso, utilizar ferramentas de suporte e checagem de código é essencial.
+ - Ferramentas de suporte a código incluem as que já vem em algumas IDEs. Funcionalidades como auto-complete, atalhos para geração de código, nomenclatura de variaveis, entre outros.
+ - O exemplo mais popular deste tipo de ferramenta é o ReSharper, que além das funcionalidades anteriores também inclui uma excelente função de refatoração
+ - Já as ferramentas de checagem de código auxiliam bastante na análise do seu código, detectando uma grande quantidade de itens de atenção no seu projeto, como
+   - Bugs
+   - Code Smells
+   - Indice de manutenção e Confiabilidade
+   - Cobertura de código
+   - Duplicação de código
+ - O SonarQube/SonarCloud é uma ferramenta bem popular de checagem de código, analisando os pontos tratados anteriormente, além de oferecer remediação nos erros apresentandos
+ - Também permite criar Quality Gates baseados nas métricas criadas, definindo então um padrão minimo para o codigo "passar" na avaliação
+ - Finalmente, é ossivel também realizar análise de código apenas em um Pull Request, garantindo também que o código esteja aderante aos padrões de qualidade adotados.
 
 
 
