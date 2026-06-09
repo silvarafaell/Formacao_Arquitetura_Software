@@ -150,6 +150,40 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Também permite criar Quality Gates baseados nas métricas criadas, definindo então um padrão minimo para o codigo "passar" na avaliação
  - Finalmente, é ossivel também realizar análise de código apenas em um Pull Request, garantindo também que o código esteja aderante aos padrões de qualidade adotados.
 
+### O que é Code Review
+ - O Code Review, ou Revisão de Código, é uma avaliação sistemática de código produzido seguindo uma série de parametros definidos
+   - Idealmente, que estejam documentados, para facilitar o processo
+ - Basicamente, o processo do Code Review segue o seguinte fluxo
+   - Uma pessoa se torna revisor de código do autor, de uma tarefa
+   - Ela analise o código em busca de inconsistencias aos padrões, e também de potenciais problemas de performance, segurança e etc
+   - Feedback é adicionado através de ferramenta, e repassado ao autor
+ - É uma boa prática ter um documento para guiar o processo
+   - Oferece valor tanto para quem vai revisar, quanto para quem vai desenvolver
+   - Sem ele, é mais comum que programadores cometam erros que já foram submetidos a Code Reviews anteriores, e que não foram documentados. Além disso, revisores podem ficar sem um "norte" e irem mais por intuição do que um padrão adotado pela equipe, resultando em revisões menos assertivas e atritos
+ - Beneficios do Code Review
+   - Maior qualidade de código
+     - Fazer com que o código produzido pela equipe passe pelo processo de Code Review resulta em maior qualidade deste. Ele auxilia, entre outras coisas, a
+       - Produzir c´doigo com uso de melhores práticas
+       - Remover código desnecessario ou não utilizado
+       - Melhorar a legibilidade
+    - Eliminação de Bugs
+      - Code Reviews podem ser uma maneira mais "barata" de descobrir bugs do que testes (mas não substitui)
+      - Os tipos de bugs que normalmente são mais encontrados nessa fase são:
+        - Logica e desenho utilizados para resolver o problema
+        - Segurança
+        - Tratamento (ou a falta dele) de excessões
+        - Performance
+     - Evita o surgimento de salvadores da pátria
+       - Com a revisão de código, evita-se que uma pessoa seja a detentora universal de uma solução, sendo a única capaz de resolver problemass nos modulos desta. E se essa pessoa ficar doente ou sair da empresa ?
+       - Diferentes membros da equipe terão conhecimento sobre os modulos que estão sendo desenvolvidos, e isso contribui para um ambiente mais saudavel
+    - Obstaculos ao Code Review
+      - Prazos curtos
+        - Se prazos curtos são a norma no projeto, é muito dificil convencer a gerencia sobre a importancia deles e justificar o tempo adicional ao final das tarefas para garantir a revisão do código
+        - Apresentar os beneficios, nesse caso     
+      - Fator humano
+        - Alguns programadores são lidam bem com feedbaks sobre seu código
+        - Alguns programadores não ligam de fazer o Code Review direito
+       
 
 
  
