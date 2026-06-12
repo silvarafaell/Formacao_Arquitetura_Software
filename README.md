@@ -183,6 +183,22 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
       - Fator humano
         - Alguns programadores são lidam bem com feedbaks sobre seu código
         - Alguns programadores não ligam de fazer o Code Review direito
+
+### O que é Código Legado
+ - Código existente que herdamos e que precisamos manter, dar suporte ou simplesmente integrar com outro sistema
+ - Geralmente dificil de se substituir, já que negociso inteiros forma e são construidos através de tecnologias que hoje em dia é considerada ultrapassada
+ - Muito dificil nunca interagir com projetos desse tipo em nossa carreira
+ - O maior problema é realizar manutenções ou evoluções nesse software
+ - Porém, algo que poucos programadores se atentam é que é possivel melhorar codigo legado, através da refatoração
+ - Para isso, é necessario entender quais técnicas existem para refatorar código, isto é, realizar melhorias na qualidade dele sem afetar a funcionalidade implementada
+ - E é exatamente o medo de "quebrar tudo" que impede a maioria dos programadores de tentar melhorar
+ - O livro "Trabalho Eficaz com Código Legado" é fantastico para isso, apresentando diversas informações e técnicas para refatorar código legado, em diversas situações
+ - "Código legado é código sem testes"
+ - Passos para melhorar um código legado
+   - Parar a escrita de novo código
+   - Refatorar o código, separando em componentes
+   - Cobrir com testes, para dar segurança nas proximas refatorações
+   - Refatorações contínuas
        
 
 
