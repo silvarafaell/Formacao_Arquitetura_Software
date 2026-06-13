@@ -199,6 +199,18 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Refatorar o código, separando em componentes
    - Cobrir com testes, para dar segurança nas proximas refatorações
    - Refatorações contínuas
+
+
+### Orientação a Objetos
+ - Antes do conceito de Orientação a Objetos existir, a programação era procedural
+ - Isso resultava em um grande fluxo de código contendo rotinas que executavam os passos necessários
+ - Com o surgimento da OO, começou a ser possivel criar programas através de interações entre os objetos, com seus dados e comportamentos próprios.
+ - Entre as atividades envolvidas no desenho orientado a objeto estão
+   - Identificar objetos
+   - Extrair classes a partir deles
+   - Definir interfaces e heranças
+   - Estabelecer relacionamentos entre eles
+ - Tópico muito comum em entrevistas para cargos de programador, tanto nacionais quanto internacionais. 
        
 
 
