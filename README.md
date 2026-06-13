@@ -233,6 +233,7 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
   - Um passo a passo para realizar essa decomposição é:
     - Extrair uma interface a partir da classe
     - Utilizar a interface extraída no código-fonte consumidor, através de injeção de dependência
+      <img src="images/Interface_ICacheService.png" alt="Arquitetura de Software" width="600">
     
       
        
