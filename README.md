@@ -219,6 +219,8 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - A partir dos requisitos e casos de uso são extraidas as hierarquias de classes e seus relacionamentos
  - Uma abordagem comum para identificação de objetos é através da narrativa apresentada nos casos de uso, onde seriam identificados os substantivos e verbos
  - Substantivos dariam origem a classes ou propriedades, e verbos a métodos
+ - Classe: Pedido (de delivery), cliente, funcionario
+ - Casos de uso: Visualizar Pedidos de Delivery por Cliente
        
 
 
