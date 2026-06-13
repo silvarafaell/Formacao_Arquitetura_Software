@@ -221,6 +221,20 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Substantivos dariam origem a classes ou propriedades, e verbos a métodos
  - Classe: Pedido (de delivery), cliente, funcionario
  - Casos de uso: Visualizar Pedidos de Delivery por Cliente
+
+ ### Orientação a Objetos - Programar para Interfaces (Sempre)
+  - Toda vez que utilizamos uma classe, criamos um acoplamento do código consumidor e a classe
+  - Caso a classe esteja indisponivel, o código não compila
+  - Por exemplo, imagine uma classe UserSevice com método GetUserConfiguration, que obtém uma configuração padrão de usuário da cache, e se não existir, obtém do repositório de dados e salva na cache
+  - Caching é m cross-cutting concern, que corresponde a funcionalidade que não esteja associada a requisitos especifico da classe
+  - Alguns outros exemplos de cross-cutting concerns são autenticação, logging, validação e threading
+  - Para esses casos, para evitar acoplamento, a decomposição dessas responsabilidades pode ser feita com o uso de padrões como Dependency Injection ou Service Locator.
+  - Ao utilizarmos interface podemos escrever testes unitários
+  - Um passo a passo para realizar essa decomposição é:
+    - Extrair uma interface a partir da classe
+    - Utilizar a interface extraída no código-fonte consumidor, através de injeção de dependência
+    
+      
        
 
 
