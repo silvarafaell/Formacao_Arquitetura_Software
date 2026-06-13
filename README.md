@@ -211,6 +211,14 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Definir interfaces e heranças
    - Estabelecer relacionamentos entre eles
  - Tópico muito comum em entrevistas para cargos de programador, tanto nacionais quanto internacionais. 
+
+### Orientação a Objetos - Como extrair Classes
+ - Antes mesmo de chegarmos ao tema de extração de classes, algo essencial é a identificação de objetos
+ - Quando se fala de Orientação a Objetos, é comum se dizer que o mundo a nossa volta tem "objetos", como caixas eletrônicos, mesas, ou pessoas
+ - Classes são utilizadas para associar objetos identificados para o dominio do software
+ - A partir dos requisitos e casos de uso são extraidas as hierarquias de classes e seus relacionamentos
+ - Uma abordagem comum para identificação de objetos é através da narrativa apresentada nos casos de uso, onde seriam identificados os substantivos e verbos
+ - Substantivos dariam origem a classes ou propriedades, e verbos a métodos
        
 
 
