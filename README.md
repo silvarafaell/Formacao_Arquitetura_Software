@@ -234,6 +234,7 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
     - Extrair uma interface a partir da classe
     - Utilizar a interface extraída no código-fonte consumidor, através de injeção de dependência
       <img src="Images/Interface_ICacheService.png" alt="Arquitetura de Software" width="600">
+    - Com a decomposição feita, será possivle que a classe UserSerivce possa trabalhar com qualquer implementação do ICacheService, resultando em desacoplamento e também e permitindo a escrita de testes unitários
     
       
        
