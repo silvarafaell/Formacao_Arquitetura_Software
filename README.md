@@ -235,6 +235,49 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
     - Utilizar a interface extraída no código-fonte consumidor, através de injeção de dependência
       <img src="Images/Interface_ICacheService.png" alt="Arquitetura de Software" width="600">
     - Com a decomposição feita, será possivle que a classe UserSerivce possa trabalhar com qualquer implementação do ICacheService, resultando em desacoplamento e também e permitindo a escrita de testes unitários
+
+### Os 4 pilares da POO
+ - Os quatro pilares da Programação Orientada a Objetos são:
+   - Abstração
+   - Encapsulamento
+   - Herança
+   - Polimorfismo
+ - Pergunta muito comum em entrevistas: quais são os pilares da POO e o que cada um significa ?
+ - Abstração
+   - Técnica que permite esconder do código consumidor/cliente detalhes de implementação, através do agrupamento de características e comportamentos
+   - REsulta na separação do código para um método ou classe separados
+   - Auxilia na melhoria da qualidade e legibilidade do código, por separar responsabilidades dentro da aplicação
+   - O próprio padrão Repositorio é uma abstração do acesso a dados
+   - Exemplo
+     - Em um serviço de aplicação implementamos o caso de uso CadastrarAluno
+     - Não somente a persistencia é feita, mas também operações como sincronização com ERP através de HTTP, salvamento de dados em cache, e publicação de mensagem em fila
+     - Se todas essas funcionalidades estiverem implementadas diretamente no serviço, o código vai ser dificil manutenção e pouso testável
+     - Ao invés disso, podemos extrair classes ( e em seguida, interfaces) contendo código responsavel por persistencia, mensageria, chamadas HTTP e Caching
+     - Com isso, o código se torna mais limpo e testável
+ - Encapsulmanento
+   - Técnica que permite controlar o acesso de código cliente a dados e comportamentos internos de uma classe
+   - Em diversass linguagens, isso é realizado através de modificadores de acesso
+   - Alguns exemplos de modificadores de acesso são: public, protected, private
+   - Definições
+     - public: o acesso não é restrito
+     - protectec: o acesso é limitado a classe que contém ou aos seus tipos derivados
+     - private: o acesso é limitado a propria classe
+   - No geral, é interessante deixar métodos que não vaõ ser expostos ao exterior com modificador de acesso private, facilitando a refatoração posterior e evitando quebras
+ - Herança
+   - Ténica que permite reutilizar, estender e modificar outras classes
+   - A classe que é herdada é comumente chamada de classe base ou pai, e a classe que herda é chamada de derivada ou filha
+   - Afetada por modificadores de acesso que estejam aplicados a classe base (por exemplo, private e protected)
+   - Exemplo
+     - Em um sistema que realiza notificação por e-mail e SMs, existe uma classe base Notificação
+     - Porem, existem diferenças entre a formatação e campos necessarios para uma notificação em e-mail, como por exemplo um Assunto, e maiores personalizações do que uma por SMS
+     - Nesse caso, seria possivel utilizar a classe base Notificação, que teria propriedades de Remetente, Destinatário e Conteúdo
+     - E se estenderia através de classe NotificaticaoEmail e NotifcacaoSms, que teriam suas propriedades e maneiras próprias de formatar a mensagem  ( mais pra frente falaremos de polimofirmos)
+ - Polimorfismo
+   - Técnica de permite que objetos de classes derivadas se comportem de maneira diferente ao da classe base para o mesmo método
+   - Ou seja, objetos de mesmo "pai" poderão ter particularidades no momento de executar um comportamento comum
+   - Em C#, por exemplo, isso é feito através de palavras-chave virtual e override, sendo a primeira a que define os comportamentos que podem ser alterados na classe derivada
+   - Já o override é responsável pela implementação na classe derivada
+    
     
       
        
