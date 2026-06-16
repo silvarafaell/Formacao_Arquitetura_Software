@@ -277,6 +277,20 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Ou seja, objetos de mesmo "pai" poderão ter particularidades no momento de executar um comportamento comum
    - Em C#, por exemplo, isso é feito através de palavras-chave virtual e override, sendo a primeira a que define os comportamentos que podem ser alterados na classe derivada
    - Já o override é responsável pela implementação na classe derivada
+
+### Orientação a Objetos - Composição x Herança
+ - Muito se fala sobre reusabilidade, sendo está um grande aspecto da programação orientada a objetos
+ - Um problema encontrado através do uso de herança foi o fato de que nem sempre a classe que herda seria realmente adequada para uma herança
+ - É importante lembrar que quando se herda, a classe derivada pode ser utilizada no contexto em que a classe pai seria aceita, coisa que nem sempre nos lembramos quando herdamos com o ojetivo de reusabilidade ( princípio de Liskov trata desse tema!)
+ - Garantir que o comportamento e relacionamentos certos entre objetos ocorram é nossa função como programador
+ - Existem duas opções para reusabilidade
+   - Herança: caixa branca
+   - Composição: caixa preta
+ - Na composição, uma instância da classe a ser reutilizada é mantida dentro da nova classe, geralmmente com um modificador de acesso privado
+ - A classe nova funciona como um wrapper, definido um contrato e delegando chamadas para a instancia da classe reutilizada
+ - Exemplo
+   - Com o uso de Repositório de dados generico através de composição se garante de que classes qeu não precisem de comportamentos como inserção, remoção ou atualização não ofereçam acesso a eles diretamente
+   - Com isso, se utiliza instância do repositório genérico internamente e se expõe apenas os métodos necessarios, definidos na interface
     
     
       
