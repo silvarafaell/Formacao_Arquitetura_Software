@@ -291,6 +291,15 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Exemplo
    - Com o uso de Repositório de dados generico através de composição se garante de que classes qeu não precisem de comportamentos como inserção, remoção ou atualização não ofereçam acesso a eles diretamente
    - Com isso, se utiliza instância do repositório genérico internamente e se expõe apenas os métodos necessarios, definidos na interface
+
+### Código Spaghetti x Lasanha
+ - Códigos procedurais, baseados em grandes fluxos de código baseados em comandos GOTO, com montes de saltos e retornos, são conhecidos como códigos spaghetti
+ - Com a programação estruturada, conceitos como partes reusáveis foram inseridos, permitindo a criação de código mais legível
+ - Com isso, começou a surgir projetos estruturados em camadas, e disso veio o termo código lasagna (lasanha)
+ - Durante a escrita de código é comum ocorrerem refatorações para um desenho que faça mais sentido e que seja mais reusável e legível
+ - Com isso, uma abordagem de desenvolvimento que ofereça uma melhor manutenção é essencial, já que cada vez mais uma maior agibilidade é necessária  no desenvolvimento e manutenção de software devido a ambientes dinA^mincas em empresas e com o apoio de metodologias ágeis
+ - Porém, sempre lembrar que essa agibilidade não pode comprometer boas práticas e princípios
+ - E que mesmo com linguagens que oferecem suporte a orietanção a objetos podem ser utilizadas de forma a criar código que seja de manutenção ruim, altamente acoplado e ilegível
     
     
       
