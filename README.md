@@ -300,6 +300,20 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Com isso, uma abordagem de desenvolvimento que ofereça uma melhor manutenção é essencial, já que cada vez mais uma maior agibilidade é necessária  no desenvolvimento e manutenção de software devido a ambientes dinA^mincas em empresas e com o apoio de metodologias ágeis
  - Porém, sempre lembrar que essa agibilidade não pode comprometer boas práticas e princípios
  - E que mesmo com linguagens que oferecem suporte a orietanção a objetos podem ser utilizadas de forma a criar código que seja de manutenção ruim, altamente acoplado e ilegível
+
+### Coesão e Acoplamento
+ - Coesão se refere a quão relacionados estão as responsabilidades implementadas em uma classe ou módulo
+ - Ele pode ser alta ou baixa, e o ideal é que seja sempre a mais alta possível
+ - Classes ou módulos coesos resultam em uma melhor manutenção e reusabilidade por terem menos dependências, no geral
+ - classes ou módulos POUCO coesos resultam em menor legibilidade e compreensão das responsabilidades de classes ou módulos, tornando a manutenção mais dificil
+ - No cenário ideal, classes são especializadas e focadas em um conjunto pequeno de responsabilidades coesas
+ - O princípio SOLID do Single Responsability está diretamente relacionado com o conceito de coesão, já que classes com uma única responsabilidade são coesas
+ - Acoplamento se refere ao grau de dependência entre classes ou módulos
+ - Uma classe está acoplada a outra quando é necessário modificá-la quando alguma alteração for feita em sua dependência, resultando em código que não compila
+ - O acoplamento também pode ser alto ou baixo, sendo baixo o ideal
+ - Interface reduz o acoplamento, deixar as classes mais testaveis
+ - Nosso alvo, no código escrito, é ter baixo acoplamento e alta coesão
+ - Com isso, teremos melhor legibilidade, testabilidade, reusabilidade e manutenção
     
     
       
