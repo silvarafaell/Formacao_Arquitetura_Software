@@ -314,6 +314,16 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Interface reduz o acoplamento, deixar as classes mais testaveis
  - Nosso alvo, no código escrito, é ter baixo acoplamento e alta coesão
  - Com isso, teremos melhor legibilidade, testabilidade, reusabilidade e manutenção
+
+### Separação de Responsabilidades
+ - Ao aplicar o princípio de Separação de Responsabilidades conseguimos alcançar um código de menor acoplamento e maior coesão
+ - Responsabilidades, neste caso, são partes de software, atribuídos a módulos que são criados ao se implementar funcionalidades
+ - Por exemplo, lógica de negócio e casos de uso, e a apresentação são responsabilidades
+ - Permite uma maior reusabilidade, dimuindo a duplicidade de código.
+ - A partir da criação de abstrações que encapsulam conceitos, permite uma maior reusabilidade, diminuindo a duplicidade de código
+ - Tambem aplicado fortemente a nível arquitetura, com um de seus grandes representantes sendo arquiteturas em camadas ( como Arquitetura Limpa, com cada camada sendo responsavel por um conjunto de responsabilidades)
+ - Alguns princípios que são proximamente relacionados são: Single Responsability Principle (SOLID), Don't Repeat Yourself (DRY)
+
     
     
       
