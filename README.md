@@ -347,6 +347,21 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - É comum se encontrar métodos sem referência ou comentários extensos e confusos em projetos de todos os portes
  - É o famoso "Vai que um dia precisamos", que em muitos cenários diminui a legibilidade de classes e módulos, além de influenciar em maior codificação, coberturas de testes de documentação.
 
+### O que são os princípios SOLID
+ - Identificados por Robert C. Martin, esse são princípios fundamentais para se escrever código mais limpo, legível e de melhor manutenção
+ - Tiveram um grande impacto na maneira que se escreve software orientado a objetos.
+ - Entre os principais benefícios de se aplicar os princípios SOLID estão:
+   - Maior testabilidade
+   - Menor acoplamento
+   - Melhor organização
+ - O acrônimo SOLID represente os seguintes princípios
+   - Single Responsability
+   - Open/closed
+   - Liskov Substitution
+   - Interface Segregation
+   - Dependency inversion
+
+
 
     
     
