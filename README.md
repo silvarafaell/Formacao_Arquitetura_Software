@@ -342,6 +342,11 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Se o banco de dados for alterado, um esforço considerável será necessario para a refatoração da aplicação, com um risco alto de ser esquecida alguma parte do código.
  - Outro exemplo é o construtor sem parâmetros, qque não força um estado padrão de inicialização do objeto, possibilitando inconsistencias e aumentando a chance de falhas e bugs
 
+### YAGNI - You Aren't Gonna Need It
+ - Princípio que se relaciona bem com o KISS ( Keep it Simple, Stupid), e que diz respeito a evitar implementações de funcionalidades que não foram apresentadas entre os requisitos
+ - É comum se encontrar métodos sem referência ou comentários extensos e confusos em projetos de todos os portes
+ - É o famoso "Vai que um dia precisamos", que em muitos cenários diminui a legibilidade de classes e módulos, além de influenciar em maior codificação, coberturas de testes de documentação.
+
 
     
     
