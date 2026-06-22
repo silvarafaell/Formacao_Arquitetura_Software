@@ -324,6 +324,16 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Tambem aplicado fortemente a nível arquitetura, com um de seus grandes representantes sendo arquiteturas em camadas ( como Arquitetura Limpa, com cada camada sendo responsavel por um conjunto de responsabilidades)
  - Alguns princípios que são proximamente relacionados são: Single Responsability Principle (SOLID), Don't Repeat Yourself (DRY)
 
+### KISS - Keep It Simple Stupid
+ - Esse princípio diz respeito a manter em nossas implementações apenas o código que for necessário
+ - Simplicidade é poder, principlamente considerando queão comum é ocorrer o chamado over-engineering, que aumenta muito a complexidade sem tanta necessidade depedendo do contexto.
+ - Quanto maior o over-engineering, maior a chance de se gerar débito técnico através da falta de compreensão do que aquela parte do código faz
+ - Quanto mais simples estiver o código, mais fácil vai ser de realizar manutenção e de identificar causas raízes
+ - Isso impacta mesmo em ambientes ágeis, do ponto de vista empreendedor para validar ideias é necessario agilidade e prática com possíveis clientes.
+ - Lembrar que simplicidade não diz respeito a ignorar abstrações, que fazem parte dos fundamentos de desenhos de software de qualidade
+ - O conceito de Over-Enginnering não é universal e varia de projeto para projeto,  e também de nível, como arquitetural (soluções ou software) ou mesmo código.
+
+
     
     
       
