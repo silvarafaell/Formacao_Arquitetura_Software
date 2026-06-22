@@ -333,6 +333,15 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Lembrar que simplicidade não diz respeito a ignorar abstrações, que fazem parte dos fundamentos de desenhos de software de qualidade
  - O conceito de Over-Enginnering não é universal e varia de projeto para projeto,  e também de nível, como arquitetural (soluções ou software) ou mesmo código.
 
+### DRY - Don't Repeat Yourself
+ - Esse princípio diz respeito a evitar duplicação de código
+ - Também se refere a outros aspectos de duplicação, como em documentação, modelos de dados e etc
+ - A duplicação resulta em riscos para o desenvolvimento do projeto, já que possibilita que a correção de bugs não afete todos os clientes de uma lógica em especifica
+ - Uma alteração de código deve ser feita em um local e em nenhum outro mais.
+ - Um exemplo comum de repetição é no acesso a dados sem o uso  de uma abstração comum
+ - Se o banco de dados for alterado, um esforço considerável será necessario para a refatoração da aplicação, com um risco alto de ser esquecida alguma parte do código.
+ - Outro exemplo é o construtor sem parâmetros, qque não força um estado padrão de inicialização do objeto, possibilitando inconsistencias e aumentando a chance de falhas e bugs
+
 
     
     
