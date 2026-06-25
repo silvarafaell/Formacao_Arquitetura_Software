@@ -375,7 +375,10 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
      - Classes com menos responsabilidades terão menos casos de teste para escrever, e maior simplicidade em fazê-lo
    - Manutenibilidade
      - Classes menores e mais organizadas são melhores de se manter e ler
- - É importante tamb
+ - É importante também não criar um monte de classes anêmincas, ou seja, classes apenas contendo propriedades ou pouquíssimo comportamentos
+   - Assim como na hora de avaliar a implementação de outros padrões e princípios, bom senso é necessário ao realizar essa divisão de dados e comportamentos
+ - Vamos utilizar em nosso exemplo um serviço de camada de aplicação responsável pela implementação de casos de uso relacionados a Pessoa
+ - Vamos focar na funcionalidade de cadastro de Pessoa. Para isso, teremos um série de operações associadas, mas qeu nem todas estão diretamente relacionadas ao caso de uso em si
 
 
 
