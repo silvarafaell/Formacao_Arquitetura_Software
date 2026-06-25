@@ -361,6 +361,22 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Interface Segregation
    - Dependency inversion
 
+### Single Responsibility Principle - SRP
+ - "There should never be more than one reason for a class to change"
+ - Em Portugues simples, você não devia ter mais de uma razão para alterar uma classe
+ - Existem diversos benefícios em seguir este princípio, como:
+   - Menor acoplamento
+   - Testabilidade
+   - Manutenibilidade e legibilidade
+ - Existem diversos benefícios em seguir este princípio, como:
+   - Menor acoplamento:
+     - Classes com menos responsabilidade tendem a ter menos dependências
+   - Testabilidade
+     - Classes com menos responsabilidades terão menos casos de teste para escrever, e maior simplicidade em fazê-lo
+   - Manutenibilidade
+     - Classes menores e mais organizadas são melhores de se manter e ler
+ - É importante tamb
+
 
 
     
