@@ -379,6 +379,12 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Assim como na hora de avaliar a implementação de outros padrões e princípios, bom senso é necessário ao realizar essa divisão de dados e comportamentos
  - Vamos utilizar em nosso exemplo um serviço de camada de aplicação responsável pela implementação de casos de uso relacionados a Pessoa
  - Vamos focar na funcionalidade de cadastro de Pessoa. Para isso, teremos um série de operações associadas, mas qeu nem todas estão diretamente relacionadas ao caso de uso em si
+ - O que fazer ? Separar as responsabilidades!
+ - Passos
+   - Extrair Método
+   - Extrair Classe
+   - Extrair Interface
+   - Utilizar a dependência para interface
 
 
 
