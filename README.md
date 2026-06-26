@@ -386,6 +386,14 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Extrair Interface
    - Utilizar a dependência para interface
 
+### Open/Closed Principle - OCP
+ - "A module should be open for extensions but closed for modifications"
+ - Em português simples, um módulo deve estar aberto para extensões mas fechado para modificações
+ - Isso significa que uma classe deve ser extensível mas que, em caso de novas funcionalidades relacionadas, você não deveria alterar o código existente
+ - Este princípio promove o uso de algumas técnicas, como interfaces e Composição.
+ - Vamos utilizar em nosso exemplo um serviço responsável por lidar com pagamentos de pedidos.
+ - Vamos focar na funcionalidade de processamento de um Pedido. Para isso, precisamos checar qual o método de pagamento utilizado para então saber como prosseguir.
+
 
 
     
