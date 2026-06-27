@@ -394,6 +394,16 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Vamos utilizar em nosso exemplo um serviço responsável por lidar com pagamentos de pedidos.
  - Vamos focar na funcionalidade de processamento de um Pedido. Para isso, precisamos checar qual o método de pagamento utilizado para então saber como prosseguir.
 
+### Liskov's Substitution Principle - LSP
+ - "Subclasses should be substitutable for their base classes"
+ - Em portugues simples, subclasses deveriam ser substituiveis por suas classes base
+ - Esse princípio pode ser violado através do mal uso de herança, onde uma classe derivada poderia suprimir condições em que a classe base é executada
+ - Um exemplo clássico é o do quadrado e retângulo
+   - De cara, não seria estranho derivar um Quadrado a partir de um retângulo. Afinal, eles são similares, logo o quadrado sria um tipo especial de retângulo, só que com os lados iguais!
+   - Porém, se um método lida com um Retângulo e receber um Quadrado, poderá disparar alguma validação no Quadrado, como a obrigatoriedade de seus lados iguais
+ - Vamos utilizar em nosso exemplo uma classe responsavel por lidar com boletim de um aluno
+ - Vamos focar na funcionalidade de calcular a média do aluno no ano, em uma matéria. Para isso, temos a implementação a seguir.
+
 
 
     
