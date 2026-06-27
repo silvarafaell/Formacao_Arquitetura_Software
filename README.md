@@ -394,6 +394,29 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Vamos utilizar em nosso exemplo um serviço responsável por lidar com pagamentos de pedidos.
  - Vamos focar na funcionalidade de processamento de um Pedido. Para isso, precisamos checar qual o método de pagamento utilizado para então saber como prosseguir.
 
+### Liskov's Substitution Principle - LSP
+ - "Subclasses should be substitutable for their base classes"
+ - Em portugues simples, subclasses deveriam ser substituiveis por suas classes base
+ - Esse princípio pode ser violado através do mal uso de herança, onde uma classe derivada poderia suprimir condições em que a classe base é executada
+ - Um exemplo clássico é o do quadrado e retângulo
+   - De cara, não seria estranho derivar um Quadrado a partir de um retângulo. Afinal, eles são similares, logo o quadrado sria um tipo especial de retângulo, só que com os lados iguais!
+   - Porém, se um método lida com um Retângulo e receber um Quadrado, poderá disparar alguma validação no Quadrado, como a obrigatoriedade de seus lados iguais
+ - Vamos utilizar em nosso exemplo uma classe responsavel por lidar com boletim de um aluno
+ - Vamos focar na funcionalidade de calcular a média do aluno no ano, em uma matéria. Para isso, temos a implementação a seguir.
+
+### Interface Segregation Principle - ISP
+ - "Clients should not be forced to depend upon interfaces that they do not use"
+ - Em português simples, clientes (de uma classe) não deveriam ser forçados a depender de interfaces que ele não utiliza
+ - Quando temos interfaces com muitas definições, aumentamos as chances de classes que o implementam não necessitem de todas elas
+ - Alguns métodos então nem seria implementados, sendo comum ver a exceção NotImplementedException ( padrão que o editor gera)
+ - Vamos utilizar em nosso exemplo uma interface responsável por definir métodos de um repositório genérico
+ - Nele, diversos métodos são definidos, coo de adição, atualização, e consulta, por exemplo
+ - E se um repositorio a ser implementado precisar apenas de métodos de leitura ?
+   - Nesse caso, o novo repositorio implementaria apenas os métodos GetAll e GetById, deixando os outros sem implementação
+   - Segundo o ISP (Interface Segregation Principle), um caminho mais recomendado seria segregar a interface IRepository<T> em interfaces menores
+   - Por exemplo, poderiam ser criadas 2 interfaces de repositório: 1 para métodos de leitura, e 1 para métodos de escrita.
+ - Como ficaria essa solução ? 
+
 
 
     
