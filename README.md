@@ -441,8 +441,22 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - De maneira prática, o framework seria o responsável por coordenar a chamada para uma classe e seu método, e não o seu próprio código
    - Visto em chamadas de Controller e de interfaces inseridas por Injeção de Dependência, em uma aplicação ASP.NET Core
 
-
-
+### O que são Design Patterns
+ - No contexto de software, um padrão é uma abordagem para resolução de um problema de arquitetura ou implementação
+ - Quando encontramos um problema durante o desenvolvimento de software, como dificuldade de se evoluir uma solução, vamos buscar por alguma solução validada
+ - Por exemplo, essa solução pode ser tanto validada por alguma experiencia nossa, quanto por um conjunto de contexto mais amplo.
+ - Um padrão descre um problema comum e descreve uma maneira de resolve-lo utilizando uma abordagem replicável em diversas situações
+ - Um design pattern, seguindo o conceito de padrão, descreve uma solução aplicável a problemas comuns encontrados durante implementação
+ - A referência principal quanto a design patterns é o GoF
+ - O acrônimo GoF significa Gang of Four, que representa os 4 autores do libro Design Patterns: Elements of Reusable Object-Oriented Software
+   - Erich Gamma
+   - Richard Helm
+   - Ralph Johnson
+   - John Vilssides
+ - Quais são os beneficios
+   - Permitem escrever código melhor, mais rápido, através de abordagens validadas através de experiencias em projetos
+   - Promovem um código mais legivel e de melhor manutenção
+   - Oferecem uma linguagem comum aos programadores
     
     
       
