@@ -417,6 +417,21 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Por exemplo, poderiam ser criadas 2 interfaces de repositório: 1 para métodos de leitura, e 1 para métodos de escrita.
  - Como ficaria essa solução ? 
 
+### Dependency Inversion Principle - DIP
+ - "High-level modules should not depend upon low-level modules. Both should depend upon abstractions"
+ - Em português, módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de abstrações.
+ - É um padrão fundamental para outros padrões como Dependency Injection
+ - Programe para interfaces e não para implementações
+ - Está diretamente relacionado a testabilidade de classes e métodos
+   - Se uma classe depende apenas de interfaces, é possivel utilizar ferramentas como o Moq ou NSubstitute para controlar o comportamento de métodos cuja implementação acessaria um recurso externo
+ - Exemplos de recursos externos: banco de dados, serviços na nuvem, APIs externas
+ - Objetivo do teste unitário é testar o método de formar isolada
+ - Caso a classe e seus métodos tenham dependência em um componente externo e sua implementação, seria necessário seguir dois passos para melhorar o desenho da solução, aderindo ao Dependency Inversion Principle (DIP)
+   - Extrair uma interface a partir da implementação do componente
+   - Utilizar a interface no lugar da implementação
+ - Vamos utilizr em nosso exemplo um serviço de camada de aplicação responsável pela implementação de casos de uso relacionados a Pessoa
+ - Vamos focar na funcionalidade de cadastro de Pessoa. Nela, temos a dependência direta em componentes externos, como implementações de repositorio, e integração com APIs exterrnas e message brocker
+
 
 
     
