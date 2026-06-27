@@ -432,6 +432,15 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Vamos utilizr em nosso exemplo um serviço de camada de aplicação responsável pela implementação de casos de uso relacionados a Pessoa
  - Vamos focar na funcionalidade de cadastro de Pessoa. Nela, temos a dependência direta em componentes externos, como implementações de repositorio, e integração com APIs exterrnas e message brocker
 
+### Dependency Inversion e Injeção de Dependência
+ - No exemplo anterior da Dependency Invasion, utilizamos a própria injeção de Dependência, que é um padrão para a disponibilização de dependências a classe
+ - Com isso, a classe não fica responsável por gerenciar as suas dependências, recebendo-as pelo construtor
+ - Um princípio associado com a Dependency Inversion e a Injeção de Dependência é a Inversão de Controle (Ioc)
+ - Um termo utilizado por Martin Fowler, como parte importante da Inversão de Controle, é o Hollywood Principle
+   - Dont call us, well call you
+   - De maneira prática, o framework seria o responsável por coordenar a chamada para uma classe e seu método, e não o seu próprio código
+   - Visto em chamadas de Controller e de interfaces inseridas por Injeção de Dependência, em uma aplicação ASP.NET Core
+
 
 
     
