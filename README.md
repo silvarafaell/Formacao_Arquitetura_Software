@@ -467,7 +467,47 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Existem grandes chances de se existir um Design Pattern para resolver um problema de implementação que você esteja tendo
  - Mas não é necessário decorar absolutamente todos Design Patterns: o objetio é, através do problema encontrado, buscar por um Design Pattern que resolve esse problema
  - Design Patterns devem ser utilizados como um livro de receitas
-    
+
+### Tipos de Design Patterns
+ - Existem 26 Design Patterns dividos em 3 tipos principais
+   - Creational
+     - Padrões utilizados para criação de instâncias de classes
+   - Structural
+     - Padrões utilizados par lidar com a estrutura e composição de classes, aumentando suas capacidades de maneira a manter o código com boa manutençãoe legibilidade
+   - Behavioral (comportamental)
+     - Lida com a comunicação e comportamento de uma classe em relação a outra.
+ - Creational
+   - Factory Method
+   - Abstract Factory
+   - Builder
+   - Singleton
+   - Prototype
+   - Object Pool     
+ - Structural
+   - Adapter
+   - Bridge
+   - Composite
+   - Decorator
+   - Facade
+   - Flyweight
+   - Private Class Data
+   - Proxy
+ - Behavioral ou Comportamental
+   - Chain of Rsponsability
+   - Command
+   - Interpreter
+   - Mediator
+   - Memento
+   - Null Object
+   - Observer
+   - State
+   - Stategy
+   - Template Method
+   - Visitor
+  
+ - Pergunta entrevista
+   - Quais são os design patterns que você mais utiliza, qual o tipo deles e um cenário de exemplo
+   
     
       
        
