@@ -457,6 +457,16 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Permitem escrever código melhor, mais rápido, através de abordagens validadas através de experiencias em projetos
    - Promovem um código mais legivel e de melhor manutenção
    - Oferecem uma linguagem comum aos programadores
+
+### Como utilizar Design Patterns
+ - Antes de falar sobre como podemos utilizar Design Patterns, tem algo importante que preciso esclarecer aqui
+   - Design Patterns não salvam projetos afundados
+   - Design Patterns são úteis, mas não oferecem muito mais do que isso ( e está tudo bem)
+   - Assim como outros padrões, Design Patterns não devem ser seguidos de maneira cega e inquestionável
+ - Os problemas encontrados vão guiar qual Design Pattern utilizar, e não o contrário
+ - Existem grandes chances de se existir um Design Pattern para resolver um problema de implementação que você esteja tendo
+ - Mas não é necessário decorar absolutamente todos Design Patterns: o objetio é, através do problema encontrado, buscar por um Design Pattern que resolve esse problema
+ - Design Patterns devem ser utilizados como um livro de receitas
     
     
       
