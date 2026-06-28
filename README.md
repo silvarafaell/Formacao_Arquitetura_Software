@@ -508,8 +508,14 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Pergunta entrevista
    - Quais são os design patterns que você mais utiliza, qual o tipo deles e um cenário de exemplo
    
-    
-      
+### O que são Design Patterns de tipo Creational
+ - Design Patterns que lidam com mecanismos de criação de instâncias (objetos)
+ - O uso do operador NEW ao utilizar construtores pode resultar em código menos legível e mais acoplado
+ - Tem como objetivo melhorar a meneira de se criar essas instâncias de acordo com a situação especifica, reduzindo a complexidade envolvida
+ - Padrões de projetos resolvem problemas
+ - Em algumas situações, você vai ter multiplas opções de padrões a serem utilizados, como Prototype e Abstract Factory
+ - Geralmente, se inicia o Factory Method, por ser mais simples de se implementar
+ - Dependendo da necessidade, poderá ocorrer o uso de outros padrões como Builder ou Abstract Factory
        
 
 
