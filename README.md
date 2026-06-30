@@ -516,6 +516,28 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Em algumas situações, você vai ter multiplas opções de padrões a serem utilizados, como Prototype e Abstract Factory
  - Geralmente, se inicia o Factory Method, por ser mais simples de se implementar
  - Dependendo da necessidade, poderá ocorrer o uso de outros padrões como Builder ou Abstract Factory
+
+### Factory Method
+ - Lembrete rápido
+   - Problemas guiam a escolha do Design Pattern, e não o contrário.
+   - Design Patterns não salvam projetos afundados
+   - Design Patterns são úteis, e pronto. Nada mais do que isso.
+ - O problema
+   - Uso demasiado de estruturas condicionais para a criação de objetos
+   - Seu código precisa utilizar muito estruturas condicionais para decidir qual instância de classe utilizar
+   - Exemplos:
+     - Tipos de notificação (e-mail, SMS, etc)
+     - Meios de pagamento ( Cartão, Boleto, Saldo em conta digital, etc)
+   - Ou seja, a cada nova classe a ser utilizada, mais condicional será adicionada, e a classe ficará cada vez mais maior e complexa
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Temos um startup com um E-Commerce, e processamos pagamentos ao receber pedidos, extraindo os dados e decidindo como proceder
+     - Porém, temos uma série de complexidades nesse processo em nosso código... O primerio deles, é que como estamos em grande crescimento, precisamos frequentemente adicionar novos modos de pagamento
+     - Atualmente temos suporte aos modos tradicionais como cartão de crédito e boleto
+     - Mas agora precisamos adicionar PIX e saldo de nossa nova conta digital, onde os clientes podem transferir e deixar rendendo...
+     - O código atual já está bem complexo, crescendo muito a cada nova forma de pagamento
+  - Sobre o Factory Method
+    - Disponibiliza uma interface para criar objetos em uma superclasse, o chamado Factory, deixando ela a cargo de decidir o tipo de objeto a ser criado
+    - A cada novo objeto a ser inserido na lógica da aplicação, a superclasse será atualizada, não impactando os clientes dela.
        
 
 
