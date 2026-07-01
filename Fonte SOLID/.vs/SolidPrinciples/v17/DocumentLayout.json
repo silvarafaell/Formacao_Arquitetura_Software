@@ -1,0 +1,358 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\dip\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:dip\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\isp\\iwriteonlyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:isp\\iwriteonlyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\isp\\ireadonlyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:isp\\ireadonlyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\isp\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:isp\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\isp\\gymunitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:isp\\gymunitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\lsp\\weightaveragegradecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:lsp\\weightaveragegradecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\lsp\\defaultyearconsolidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:lsp\\defaultyearconsolidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\lsp\\simpleaveragegradecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:lsp\\simpleaveragegradecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\lsp\\iaveragegradecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:lsp\\iaveragegradecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\ocp\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:ocp\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\srp\\ierpsyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:srp\\ierpsyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\srp\\ibusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:srp\\ibusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\srp\\ipersonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:srp\\ipersonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|c:\\estudos\\formacao_arquitetura_software\\fonte solid\\srp\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058D6C17-3DED-BAD6-2C1D-4EA9591DB083}|SolidPrinciples.csproj|solutionrelative:srp\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 24,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:142:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PersonService.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Dip\\PersonService.cs",
+              "RelativeDocumentMoniker": "Dip\\PersonService.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Dip\\PersonService.cs",
+              "RelativeToolTip": "Dip\\PersonService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T11:25:54.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IWriteOnlyRepository.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Isp\\IWriteOnlyRepository.cs",
+              "RelativeDocumentMoniker": "Isp\\IWriteOnlyRepository.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Isp\\IWriteOnlyRepository.cs",
+              "RelativeToolTip": "Isp\\IWriteOnlyRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T03:05:01.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IReadOnlyRepository.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Isp\\IReadOnlyRepository.cs",
+              "RelativeDocumentMoniker": "Isp\\IReadOnlyRepository.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Isp\\IReadOnlyRepository.cs",
+              "RelativeToolTip": "Isp\\IReadOnlyRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T03:04:45.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GymUnitRepository.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Isp\\GymUnitRepository.cs",
+              "RelativeDocumentMoniker": "Isp\\GymUnitRepository.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Isp\\GymUnitRepository.cs",
+              "RelativeToolTip": "Isp\\GymUnitRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T03:03:44.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Isp\\IRepository.cs",
+              "RelativeDocumentMoniker": "Isp\\IRepository.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Isp\\IRepository.cs",
+              "RelativeToolTip": "Isp\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T03:03:31.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IAverageGradeCalculator.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Lsp\\IAverageGradeCalculator.cs",
+              "RelativeDocumentMoniker": "Lsp\\IAverageGradeCalculator.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Lsp\\IAverageGradeCalculator.cs",
+              "RelativeToolTip": "Lsp\\IAverageGradeCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T02:41:55.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SimpleAverageGradeCalculator.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Lsp\\SimpleAverageGradeCalculator.cs",
+              "RelativeDocumentMoniker": "Lsp\\SimpleAverageGradeCalculator.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Lsp\\SimpleAverageGradeCalculator.cs",
+              "RelativeToolTip": "Lsp\\SimpleAverageGradeCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T02:23:51.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeightAverageGradeCalculator.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Lsp\\WeightAverageGradeCalculator.cs",
+              "RelativeDocumentMoniker": "Lsp\\WeightAverageGradeCalculator.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Lsp\\WeightAverageGradeCalculator.cs",
+              "RelativeToolTip": "Lsp\\WeightAverageGradeCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T02:23:41.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DefaultYearConsolidate.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Lsp\\DefaultYearConsolidate.cs",
+              "RelativeDocumentMoniker": "Lsp\\DefaultYearConsolidate.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Lsp\\DefaultYearConsolidate.cs",
+              "RelativeToolTip": "Lsp\\DefaultYearConsolidate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T02:23:37.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Ocp\\PaymentService.cs",
+              "RelativeDocumentMoniker": "Ocp\\PaymentService.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Ocp\\PaymentService.cs",
+              "RelativeToolTip": "Ocp\\PaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-26T02:11:40.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IErpSyncService.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Srp\\IErpSyncService.cs",
+              "RelativeDocumentMoniker": "Srp\\IErpSyncService.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Srp\\IErpSyncService.cs",
+              "RelativeToolTip": "Srp\\IErpSyncService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T02:54:33.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IBusService.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Srp\\IBusService.cs",
+              "RelativeDocumentMoniker": "Srp\\IBusService.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Srp\\IBusService.cs",
+              "RelativeToolTip": "Srp\\IBusService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T02:50:24.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T02:49:39.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IPersonRepository.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Srp\\IPersonRepository.cs",
+              "RelativeDocumentMoniker": "Srp\\IPersonRepository.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Srp\\IPersonRepository.cs",
+              "RelativeToolTip": "Srp\\IPersonRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T02:46:59.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PersonRepository.cs",
+              "DocumentMoniker": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Srp\\PersonRepository.cs",
+              "RelativeDocumentMoniker": "Srp\\PersonRepository.cs",
+              "ToolTip": "C:\\estudos\\Formacao_Arquitetura_Software\\Fonte SOLID\\Srp\\PersonRepository.cs",
+              "RelativeToolTip": "Srp\\PersonRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T02:46:00.432Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
