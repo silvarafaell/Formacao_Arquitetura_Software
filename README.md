@@ -554,6 +554,19 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Sobre o ABSTRACT FACTORY
      - Disponibiliza uma interface para criar um conjunto de objetos em uma superclasse, o chamando Abstract Factory, deixando a cargo de decidir a família de objetos a ser criada
      - A cada nova "família" a ser inserida na lógica da aplicação, a superclasse será atualizada, não impactando os clientes dela
+
+### Builder
+ - O problema
+   - Inicialização de objetos complexos, que envolvam muitos dados e agrupamentos de objetos
+   - Exemplos:
+     - Montar um objeto de boleto, que coném diversos parâmetros
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Precisamos instanciar um objeto de boleto
+     - Ele contém dados de diversos agrupamentos de dados, como Dados de Recebedor, Pagador, além dos próprios dados do boleto, como Nosso Número, Valor do Documento, entre outros.
+   - Sobre o Builder
+     - Propõe que o código de cria~ção de objeto seja movido para fora da classe
+     - São definidos passos para construção do objeto, de maneira a deixar o processo mais legível e simplificado
+     - Em alguns cenários será necessário criar diferentes implementações de Builder, para tipos diferentes de objeto
        
 
 
