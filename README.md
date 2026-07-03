@@ -538,6 +538,22 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
   - Sobre o Factory Method
     - Disponibiliza uma interface para criar objetos em uma superclasse, o chamado Factory, deixando ela a cargo de decidir o tipo de objeto a ser criado
     - A cada novo objeto a ser inserido na lógica da aplicação, a superclasse será atualizada, não impactando os clientes dela.
+
+### Abstract Factory
+ - O problema
+   - Uso demasiado de estruturas condicionais para a criação de conjuntos de objetos, especificos para cada condição
+   - Exemplo:
+     - Cálculo de diferentes impostos (FGTS, IR) dependendo do salário de funcionário podem virar diferentes classes, um por imposto, mas com implementações especificas para cada faixa
+     - Cada condicional pode ficar enorme, já que irão instanciar cada classe de cálculo internamente dependendo de faixa de salário.
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Ainda com o exemplo da Startup de E-Commerce, surgiu a necessidade de restringir o pagamento e envio dependendo se a compra é internacional ou não.
+     - Se for internacional, o pagamento é só por cartão de crédito
+     - Se for nacional, o pagamento pode ser feito por cartão ou boleto
+     - Ambas têm maneiras distintas de processar o envio
+     - Se no futuro quisermos adicionar mais uma condição sobre essa família de objetos relacionado a pagamento e envio ( e possivelmente outras mais), precisaremos adicionar mais uma condicional, que pode ser tão complexa ou até mais que as outras.
+   - Sobre o ABSTRACT FACTORY
+     - Disponibiliza uma interface para criar um conjunto de objetos em uma superclasse, o chamando Abstract Factory, deixando a cargo de decidir a família de objetos a ser criada
+     - A cada nova "família" a ser inserida na lógica da aplicação, a superclasse será atualizada, não impactando os clientes dela
        
 
 
