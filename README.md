@@ -579,5 +579,14 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
      - Propõe que o código de criação da cópia esteja dentro da classe do tipo do objeto a ser clonado
      - Definição de uma interface para todos objetos que suportam a operação de clonagem
 
+### Singleton
+ - O problema
+   - Garantir que uma classe tenhas apenas uma úniica instÂncia
+   - Comum de se utilizar com dados que sejam mais estáticos, como configurações
+   - Ao invés de sempre instanciar toda vez que foor utilizar, sria interessante uma alternativa...
+ - Sobre o Singleton
+   - Garante que vai existir apenas uma instÂncia de uma classe, fornecendo um ponto de acesso global a ela
+   - O Framework Web ASP.NET Core contém funcionalidades nativas de injeção de dependência com suporte a tempo de ciclo de vida, incluindo o Singleton
+
 
  
