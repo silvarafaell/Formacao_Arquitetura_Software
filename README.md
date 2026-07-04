@@ -567,7 +567,17 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
      - Propõe que o código de cria~ção de objeto seja movido para fora da classe
      - São definidos passos para construção do objeto, de maneira a deixar o processo mais legível e simplificado
      - Em alguns cenários será necessário criar diferentes implementações de Builder, para tipos diferentes de objeto
-       
+
+### Prototype
+ - O problema
+   - Criar cópia exata de um objeto, tendo que ir de propriedade a propriedade atribuindo ao novo objeto
+     - Porém, algumas propriedades/campos podem ser privados o que impossibilita a criação de cópia externamente
+     - Também exige que o contexto do código do código tenha uma dependência na classe a ser copiada, já que precisará lidar com ela diretamente
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Precisamos criar uma cópia dos dados de Cliente, em um Pedido sendo feito, para trabalhar em um outro contexto sem que a referência atrapalhe
+   - Sobre o Prototype
+     - Propõe que o código de criação da cópia esteja dentro da classe do tipo do objeto a ser clonado
+     - Definição de uma interface para todos objetos que suportam a operação de clonagem
 
 
  
