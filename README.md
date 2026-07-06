@@ -588,5 +588,13 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Garante que vai existir apenas uma instÂncia de uma classe, fornecendo um ponto de acesso global a ela
    - O Framework Web ASP.NET Core contém funcionalidades nativas de injeção de dependência com suporte a tempo de ciclo de vida, incluindo o Singleton
 
+### O que são Design Patterns de tipo Structural
+ - Design Patterns que lidam com mecanismos de melhorar a estrutura de classes, tornando-as mais flexíveis e eficientes
+ - Alguns exemplos disso são:
+   - Adição de comportamentos a objetos
+   - Simplificar interação com bibliotecas, frameworks ou classes
+   - Colaboração de objetos de interfaces incompatíveis
+   - Entre outros. 
+
 
  
