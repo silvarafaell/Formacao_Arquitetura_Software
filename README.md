@@ -610,4 +610,14 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Ele funciona como um Wrapper, internamente delegando a chamada para o objeto existente, mas retornando na interface desejada pela aplicação
    - Padrão comum em uma Anti-Corrpution LAyer (Camda Anti-Corrupção, conceito relacionado ao Domain-Driven Desing)
 
+### Decorator
+ - O problema
+   - Adição de novos comportamentos a objetos sem alterar o comportamento original, mantendo a separação de responsabilidades
+   - Exemplo:
+     - Toda vez que realizamos uma ação ( ou conjunto delas), precisamos enviar uma notificação
+     - Toda vez que processamos um pedido notificamos um software CRM para cadastrar o cliente, contendo dados da compra
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Toda vez que processamos um pedido notificamos um software CRM para cadastrar o cliente, contendo dados da compra
+     - Não queremos alterar cada implementação de IPaymentService para realizar a chamada
+
  
