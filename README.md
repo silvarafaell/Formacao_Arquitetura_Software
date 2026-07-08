@@ -619,5 +619,8 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Em nosso caso, vamos utilizar o seguinte exemplo:
      - Toda vez que processamos um pedido notificamos um software CRM para cadastrar o cliente, contendo dados da compra
      - Não queremos alterar cada implementação de IPaymentService para realizar a chamada
+   - Sobre o Decorator
+     - Propõe a criação de uma classe (Decorator) que vai "envelopar" a classe a ser estendida, através de Composição
+     - O Decorator Implementa a mesma interface que a classe original, adicionando comportamento antes ou depois da chamada do método original desejado
 
  
