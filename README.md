@@ -583,10 +583,31 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - O problema
    - Garantir que uma classe tenhas apenas uma úniica instÂncia
    - Comum de se utilizar com dados que sejam mais estáticos, como configurações
-   - Ao invés de sempre instanciar toda vez que foor utilizar, sria interessante uma alternativa...
+   - Ao invés de sempre instanciar toda vez que foor utilizar, seria interessante uma alternativa...
  - Sobre o Singleton
    - Garante que vai existir apenas uma instÂncia de uma classe, fornecendo um ponto de acesso global a ela
    - O Framework Web ASP.NET Core contém funcionalidades nativas de injeção de dependência com suporte a tempo de ciclo de vida, incluindo o Singleton
 
+### O que são Design Patterns de tipo Structural
+ - Design Patterns que lidam com mecanismos de melhorar a estrutura de classes, tornando-as mais flexíveis e eficientes
+ - Alguns exemplos disso são:
+   - Adição de comportamentos a objetos
+   - Simplificar interação com bibliotecas, frameworks ou classes
+   - Colaboração de objetos de interfaces incompatíveis
+   - Entre outros. 
+   
+### Adapter
+ - O problema
+   - Colaboração entre objetos com interface incompatíveis entre si
+   - Exemplos:
+   - Integração com sistemas terceiros, qeu podem trabalhar com interfaces e até formatos diferentes (XML, por exemplo), com sua aplicação trabalhando primariamente com JSON
+ - Em nosso caso, vamos utilizar o seguinte exemplo:
+   - Prexisamos invocar um serviço terceiro para obter os dados de Boleto
+   - Porém, o modelo retornado pelo o serviço é incompatível com nosso modelo, especificamente nos dados de boleto, com estrutura e nomenclaturas diferentes
+   - Por conta disso, temos uma interface de integração com o sistema terceiro IExternalPaymentSlipService, e queremos usar nosso IPaymentSlipService para retornar os dados usando nosso modelo
+ - Sobre o Adapter
+   - Propõe que a criação de um objeto Adapter (ou Adaptador), que será responsável por converter a interface de um objeto para outro
+   - Ele funciona como um Wrapper, internamente delegando a chamada para o objeto existente, mas retornando na interface desejada pela aplicação
+   - Padrão comum em uma Anti-Corrpution LAyer (Camda Anti-Corrupção, conceito relacionado ao Domain-Driven Desing)
 
  
