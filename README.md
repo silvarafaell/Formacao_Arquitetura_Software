@@ -623,4 +623,15 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
      - Propõe a criação de uma classe (Decorator) que vai "envelopar" a classe a ser estendida, através de Composição
      - O Decorator Implementa a mesma interface que a classe original, adicionando comportamento antes ou depois da chamada do método original desejado
 
- 
+### Facade
+ - O problema
+   - Utilização de bibliotecas, frameworks ou conjunto complexo de classes
+   - Nesses casos, a utilização é dificultada por conta de configuração e inicialização de objetos, chamadas de métodos de retornos, entre outras atividades
+   - Exemplos:
+     - Chamadas HTTP a APIs terceiras, como serviços de computação em Nuvem e integração entre sistemas
+     - Bibliotecas ou frameworks no geral que tenham interfaces complexas
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Precisamos enviar dados para uma API terceira de detecção de fraude, com dados como Documento do cliente e Total do Pedido
+ - Sobre o Facade
+   - Propõe que sejaa criada uma interface simplificada para uma biblioteca, framework ou conjunto complexo de classes
+   - Com isso, apesar de se ter funcionalidades limitadas quando comparado ao acesso direto, ela simplifica o uso das funcionalidades ao conter apenas necessárias, realizando uma adaptação de interfaces
