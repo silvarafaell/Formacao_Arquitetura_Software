@@ -635,3 +635,23 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Sobre o Facade
    - Propõe que sejaa criada uma interface simplificada para uma biblioteca, framework ou conjunto complexo de classes
    - Com isso, apesar de se ter funcionalidades limitadas quando comparado ao acesso direto, ela simplifica o uso das funcionalidades ao conter apenas necessárias, realizando uma adaptação de interfaces
+
+### Proxy
+ - O problema
+   - Controle de acesso a um objeto
+   - Exemplos de operações de controle a um objeto:
+     - Lazy Loading
+     - Caching
+     - Autorização
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Precisamos controlar o acesso a lista de clientes bloqueados, obtida de um repositório
+     - Porém, temos algumas restrições aqui:
+       - Para acessar suas informações, precisamos acessar o banco de dados na primeira execução, realizando o caching dos dados
+       - Além disso, precisamos garantir que o usuário da requisição atual seja de perfil "admin" para poder acessar o objeto
+   - Se precisarmos realizar essas operações em todos contextos de acesso a essa lista, teremos muita repetição de código.
+   - Sobre o Proxy
+     - Propõe a criação de um objeto Proxy, que controla o acesso ao objeto original
+     - O objeto Proxy pode realizar validações e operações antes ou depois do acesso ao objeto original
+     - Similar ao padrão Decorator em uma sua implementação, mas bem diferente conceitualmente
+       - O proxy controla o acesso
+       - O Decorator estende com novos comportamentos
