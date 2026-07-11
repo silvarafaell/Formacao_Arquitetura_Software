@@ -655,3 +655,17 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
      - Similar ao padrão Decorator em uma sua implementação, mas bem diferente conceitualmente
        - O proxy controla o acesso
        - O Decorator estende com novos comportamentos
+
+### Composite
+ - O problema
+   - Representar o modelo através de uma estrutura de arvore, fazendo sentido para estruturas hierarquicas, por exemplo
+   - Exemplos:
+     - Funcionarios e hierarquias de cargos em empresas
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Precisamos modelar a estrutura de funcionários e gerentes, e permitir que calculemos os gastos corporativos deles. No caso de um gerente, o gasto deverá ser o dele próprio + o da sua equipe
+   - Sobre o Composite
+     - Padrão estrutural que permite modelar objetos em uma estrutura de arvore
+     - É composto
+       - Componente ( a interface dos itens da arvore)
+       - Folha ( estrutura simples que realiza algum trabalho)
+       - Composite ( estrutura mais complexa que contém um conjunto de Componentes, que podem ser Folha ou outros Composites)
