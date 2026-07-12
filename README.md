@@ -669,3 +669,20 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
        - Componente ( a interface dos itens da arvore)
        - Folha ( estrutura simples que realiza algum trabalho)
        - Composite ( estrutura mais complexa que contém um conjunto de Componentes, que podem ser Folha ou outros Composites)
+     
+### Bridge
+ - O problema
+   - Hierarquias complexas de classes relacionadas que tornam a extensão delas e suas combinações uma tarefa complexas
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Temos 2 tipos de itens em um mercado: Produto e Comida
+     - Cada produto ou comida pode variar em sua unidade de medida, podendo ser por Kg ou quantidade
+     - Pra isso, acabamos criando 4 classes: ProdutoPorKg, ProdutoPorQuantidade, ComidaPorKg, ComidaPorQuantidade
+     - Se for adicionar um nova unidade de medida (como Litro), vai acabar tendo que criar um para cada tipo de produto, tornando a hierarquia de classes mais complexa e pouco flexível
+     - Em resumo: existem diversos tipos de itens, e os itens podem utilizar uma de diversas unidades de medida
+   - Sobre o Bridge
+     - Permite simplificar hierarquias de classes em complexas
+     - Ao invés de criar classes que representam cada uma das diferentes combinações, um Item pode utilizar uma interface de Unidade, que poderá ter as implementações dos seus diferentes tipos
+     - Logo, teriamos as hierarquias
+       - Item
+       - Unidade
+     - Com isso, respeitamos o Open-Closed Principle (OCP) do Solid
