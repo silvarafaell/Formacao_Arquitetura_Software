@@ -727,3 +727,16 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Um padrão descreve um problema comum e descreve uma maneira de resolvê-lo utilizando uma abordagem replicável em diversas situações
    - Um design pattern, seguindo o conceito de padrão, descreve uma solução aplicável a problemas comuns encontrados durante implementação
    - Dependendo do contexto, vai necessitar de adaptação em seu uso.
+
+### Chain of Responsibility
+ - O problema
+   - Complexidade de código de execução uma sequência de passos para uma dada tarefa
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Para aprovar um pedido, precisamos realizar uma série de passos. Por exemplo, precisamos confirmar o status do cliente ( está bloqueado ? ), o estoque do produto, e também realizar um checagem para fraude com base no dados do CPF e compra
+     - Em caso de uma falha no processo, não é necessario seguir.
+     - Um código que realiza algo do tipo é apresentado a seguir
+     - Note que esse código é fragil, e que novas checagens vão aumentando a complexidade e dificuldade de manutenção do código, diminuindo sua legibilidade
+   - Sobre o Chain of Responsibility
+     - Propõe a criação de um objeto Handler, que será responsável por definir os passos e executá-los na ordem correta, controlando o fluxo
+     - Basicamente, o Handler armazena o próximo objeto que pode executar a tarefa, executando a tarefa, e analisando cada resposta, invocando então o próximo da sequência
+     - Interrompe o processamento em caso de resposta de falha, que pode variar de cada implementação
