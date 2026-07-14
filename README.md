@@ -705,3 +705,25 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
     - Propõe a criação de uma classe Factory que seria a responsavel por garantir que as instâncias de objetos comuns de uso não sejam criadas de maneira desnecessaria e repetida
     - Vemos aqui uma similariedade com outro Design Pattern: Singleton
       - Enquanto o Singleton se refere a um único objeto, O Flyweight se refere a vários. Inclusive, o objeto Factory do Flyweight pode ser criado através do Padrão Singleton.
+
+### O que são Design Patterns de tipo Behavioral
+ - Design Patterns que lidam com a comunicação e comportamento de uma classe em relação a outra
+ - Alguns exemplos disso são:
+   - Redução de dependências entre objetos
+   - Notificação de eventos para objetos inscritos
+   - Definição e execução de famílias de algoritmos
+ - Chain of Responsibility
+ - Command
+ - Iterator
+ - Mediator
+ - Memento
+ - Observer
+ - State
+ - Strategy
+ - Template Method
+ - Visitor
+ 
+ - Lembrete
+   - Um padrão descreve um problema comum e descreve uma maneira de resolvê-lo utilizando uma abordagem replicável em diversas situações
+   - Um design pattern, seguindo o conceito de padrão, descreve uma solução aplicável a problemas comuns encontrados durante implementação
+   - Dependendo do contexto, vai necessitar de adaptação em seu uso.
