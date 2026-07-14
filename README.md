@@ -635,3 +635,73 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Sobre o Facade
    - Propõe que sejaa criada uma interface simplificada para uma biblioteca, framework ou conjunto complexo de classes
    - Com isso, apesar de se ter funcionalidades limitadas quando comparado ao acesso direto, ela simplifica o uso das funcionalidades ao conter apenas necessárias, realizando uma adaptação de interfaces
+
+### Proxy
+ - O problema
+   - Controle de acesso a um objeto
+   - Exemplos de operações de controle a um objeto:
+     - Lazy Loading
+     - Caching
+     - Autorização
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Precisamos controlar o acesso a lista de clientes bloqueados, obtida de um repositório
+     - Porém, temos algumas restrições aqui:
+       - Para acessar suas informações, precisamos acessar o banco de dados na primeira execução, realizando o caching dos dados
+       - Além disso, precisamos garantir que o usuário da requisição atual seja de perfil "admin" para poder acessar o objeto
+   - Se precisarmos realizar essas operações em todos contextos de acesso a essa lista, teremos muita repetição de código.
+   - Sobre o Proxy
+     - Propõe a criação de um objeto Proxy, que controla o acesso ao objeto original
+     - O objeto Proxy pode realizar validações e operações antes ou depois do acesso ao objeto original
+     - Similar ao padrão Decorator em uma sua implementação, mas bem diferente conceitualmente
+       - O proxy controla o acesso
+       - O Decorator estende com novos comportamentos
+
+### Composite
+ - O problema
+   - Representar o modelo através de uma estrutura de arvore, fazendo sentido para estruturas hierarquicas, por exemplo
+   - Exemplos:
+     - Funcionarios e hierarquias de cargos em empresas
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Precisamos modelar a estrutura de funcionários e gerentes, e permitir que calculemos os gastos corporativos deles. No caso de um gerente, o gasto deverá ser o dele próprio + o da sua equipe
+   - Sobre o Composite
+     - Padrão estrutural que permite modelar objetos em uma estrutura de arvore
+     - É composto
+       - Componente ( a interface dos itens da arvore)
+       - Folha ( estrutura simples que realiza algum trabalho)
+       - Composite ( estrutura mais complexa que contém um conjunto de Componentes, que podem ser Folha ou outros Composites)
+     
+### Bridge
+ - O problema
+   - Hierarquias complexas de classes relacionadas que tornam a extensão delas e suas combinações uma tarefa complexas
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Temos 2 tipos de itens em um mercado: Produto e Comida
+     - Cada produto ou comida pode variar em sua unidade de medida, podendo ser por Kg ou quantidade
+     - Pra isso, acabamos criando 4 classes: ProdutoPorKg, ProdutoPorQuantidade, ComidaPorKg, ComidaPorQuantidade
+     - Se for adicionar um nova unidade de medida (como Litro), vai acabar tendo que criar um para cada tipo de produto, tornando a hierarquia de classes mais complexa e pouco flexível
+     - Em resumo: existem diversos tipos de itens, e os itens podem utilizar uma de diversas unidades de medida
+   - Sobre o Bridge
+     - Permite simplificar hierarquias de classes em complexas
+     - Ao invés de criar classes que representam cada uma das diferentes combinações, um Item pode utilizar uma interface de Unidade, que poderá ter as implementações dos seus diferentes tipos
+     - Logo, teriamos as hierarquias
+       - Item
+       - Unidade
+     - Com isso, respeitamos o Open-Closed Principle (OCP) do Solid
+     
+### Flyweight
+ - O problema
+   - Uso grande memória para alocação de objetos que contém dados comuns entre as requisições
+   - Exemplos:
+     - Componentes de um jogo como características de personagens e armas, que não mudam de um usuário para outro.
+       - caso utilizem instâncias diferentes, muita memória pode ser consumida
+  - Em nosso caso, vamos utilizar o seguinte exemplo:
+    - Precisamos retornar um objeto que contém dados a respeito de formas de pagamento de um pedido, tendo como opções:
+      - Boleto
+      - Cartão de Crédito
+      - PayPal
+     - Como é um objeto frequentemente requisitado, acabamos tendo que criar diversas instâncias, uma para cada requisição ao servidor
+     - Isso resulta em impactos na memória disponivel
+     - Como reduzir a quantidade de objetos criados ?
+  - Sobre o Flyweight
+    - Propõe a criação de uma classe Factory que seria a responsavel por garantir que as instâncias de objetos comuns de uso não sejam criadas de maneira desnecessaria e repetida
+    - Vemos aqui uma similariedade com outro Design Pattern: Singleton
+      - Enquanto o Singleton se refere a um único objeto, O Flyweight se refere a vários. Inclusive, o objeto Factory do Flyweight pode ser criado através do Padrão Singleton.
