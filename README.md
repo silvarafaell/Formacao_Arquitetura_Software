@@ -686,3 +686,22 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
        - Item
        - Unidade
      - Com isso, respeitamos o Open-Closed Principle (OCP) do Solid
+     
+### Flyweight
+ - O problema
+   - Uso grande memória para alocação de objetos que contém dados comuns entre as requisições
+   - Exemplos:
+     - Componentes de um jogo como características de personagens e armas, que não mudam de um usuário para outro.
+       - caso utilizem instâncias diferentes, muita memória pode ser consumida
+  - Em nosso caso, vamos utilizar o seguinte exemplo:
+    - Precisamos retornar um objeto que contém dados a respeito de formas de pagamento de um pedido, tendo como opções:
+      - Boleto
+      - Cartão de Crédito
+      - PayPal
+     - Como é um objeto frequentemente requisitado, acabamos tendo que criar diversas instâncias, uma para cada requisição ao servidor
+     - Isso resulta em impactos na memória disponivel
+     - Como reduzir a quantidade de objetos criados ?
+  - Sobre o Flyweight
+    - Propõe a criação de uma classe Factory que seria a responsavel por garantir que as instâncias de objetos comuns de uso não sejam criadas de maneira desnecessaria e repetida
+    - Vemos aqui uma similariedade com outro Design Pattern: Singleton
+      - Enquanto o Singleton se refere a um único objeto, O Flyweight se refere a vários. Inclusive, o objeto Factory do Flyweight pode ser criado através do Padrão Singleton.
