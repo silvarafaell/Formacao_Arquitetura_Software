@@ -740,3 +740,14 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
      - Propõe a criação de um objeto Handler, que será responsável por definir os passos e executá-los na ordem correta, controlando o fluxo
      - Basicamente, o Handler armazena o próximo objeto que pode executar a tarefa, executando a tarefa, e analisando cada resposta, invocando então o próximo da sequência
      - Interrompe o processamento em caso de resposta de falha, que pode variar de cada implementação
+     
+### Command
+ - O problema
+   - Chamadas de métodos com múltiplos parâmetros ou necessidade de armazenamento de parÂmetnros de uma dada operação para posterior execução
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Atualmente passamos os parÂmetros diretamente ao nosso método de checagem, que é basicamente um Façade para um serviço terceiro
+     - Temos a necessidade de realizar a chamda de checagem de fraude na criação de pedido de maneira assíncrona, via mensageria
+     - Também gostariamos de armazenar essa mensagem em nossos logs, para fins de auditoria posterior.
+   - Sobre o Command
+     - Propõe a transformação de parâmetros de uma chamada em um objeto que contém todas suas informações sobre ela
+     - Com isso, é possivel armazenar esse objeto para posterior processamento da chamada, por exemplo via fila ou agendamento, e também armazenar em logs
