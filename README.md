@@ -751,3 +751,14 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Sobre o Command
      - Propõe a transformação de parâmetros de uma chamada em um objeto que contém todas suas informações sobre ela
      - Com isso, é possivel armazenar esse objeto para posterior processamento da chamada, por exemplo via fila ou agendamento, e também armazenar em logs
+
+### Iterator
+ - O problema
+   - Acoplamento com o método de travessiade coleções diferentes
+   - Quando precisamos percorrer uma coleção, muitas vezes ocorre o acoplamento com o método de travessia, já que cada coleção tem sua própria maneira de percorrer, como em Fila,Pilha, estruturas de Arvore, entre outras
+ - Em noss caso, vamos utilizar o seguinte exemplo:
+   - Precisamos percorrer uma lista de clientes bloqueados e realizar uma certa ação, como notificar seus e-mails
+   - Porém, para isso, não podemos expor a estrutura interna de um modelo que já estamos utilizando. No caso, estamos internamente utilizando um dicionário para armazenar os clientes e seus e-mails
+ - Sobre o Iterator
+   - Propõe que a criação de um objeto Iterator (ou a extensão da classe que contém a estrutura de dados atual) para permitir a travessia de seus objetos sem expor a implementação interna
+   - Por exemplo, com isso seria possivel percorrer os dados de um dicionário interno de um objeto sem precisar conhecer sua implementação interna, percorrendo como se fosse uma lista
