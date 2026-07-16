@@ -762,3 +762,17 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
  - Sobre o Iterator
    - Propõe que a criação de um objeto Iterator (ou a extensão da classe que contém a estrutura de dados atual) para permitir a travessia de seus objetos sem expor a implementação interna
    - Por exemplo, com isso seria possivel percorrer os dados de um dicionário interno de um objeto sem precisar conhecer sua implementação interna, percorrendo como se fosse uma lista
+   
+### Mediator
+ - O problema
+   - Estrutura e fluxo similar entre implementações, existindo um forte acoplamento com componentes (interfaces e implementações) similares
+   - Exemplo:
+     - Comum de se encontrar emm aplicações que utilizam abstrações para o caso de uso, como serviços de camada de aplicação ( Arquitetura Limpa), CQRS, entre outros
+     - O problema é que Action do ASP.NET Core, precisa saber qual classe/interface e método especifico precisa invocar.
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Queremos utilizar o padrão CQRS em nosso projeto (poderia ser a Arquitetura Hexagonal, com UseCases)
+     - As Actions do nosso ProductController precisam saber qual Handler instanciar, e chamar o método Handle dele para conseguir o resultado desejado, havendo a comunicação direta
+     - Isso acopla nosso controller com cada um dos Handlers, tendo sempre que saber com qualidar dependendo do Query ou Command
+   - Sobre o Mediator
+     - Propõe a criação de um objeto Mediator, que será o responsável por delegar para o componente correspondente, removendo as comunicações diretas
+     - Um contra desse padrão é a alta concentração de responsabilidade no objeto Mediator (God Object)
