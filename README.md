@@ -805,3 +805,16 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
      - Propõe a criação de um objeto Subject e um ou mais Observer
      - O Subject é responsável por notificar os objetos Observer que estão inscritos a ele
      - Em nosso cenário, o objeto Subject manteria o estado das ofertas atuais, e os Observer seriam classes que executariam código toda vez que a oferta atual fosse modificada, como notificações
+     
+### State
+ - O problema
+   - Gerenciamento de estados de um objeto, que pode incluir lógica mais complexa e checagens baseado em seu estado
+   - Por exemplo, um pedido de delivery pode estar em estado aberto, onde aceita atualizações, como mensagens entre cliente e o restaurante. Porém, não deveria permitir operações como avaliação!
+   - Porém, caso o pedido esteja finalizado, algumas operações não deveriam ser permitidas, como alterar o pedido ou enviar mensagem. Já outras devem estar liberadas, como avaliação do pedio/entrega/restaurante
+ - Conceito de Finite State Machine
+   - Em programação, é um modelo de computação composto por um ou mais estados
+   - Somente um estado pode estar ativo ao mesmo tempo, então é necessário alterar o estado caso a máquina/objeto queira realizar diferentes operações.
+ - Sobre o State
+   - Propõe a criação de uma classe State para cada um dos possíveis estados de um objeto
+   - Nesse caso, seriam extraídos os comportametnos especificos da classe original para cada um de seus States
+   - Além disso, também seria criada uma classe Context que mantém uma instância de classe State
