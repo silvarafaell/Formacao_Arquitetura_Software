@@ -776,3 +776,18 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Sobre o Mediator
      - Propõe a criação de um objeto Mediator, que será o responsável por delegar para o componente correspondente, removendo as comunicações diretas
      - Um contra desse padrão é a alta concentração de responsabilidade no objeto Mediator (God Object)
+     
+### Memento
+ - O problema
+   - Dificuldade em gerenciar estados anteriores de um objeto, através de operações como restaurar ou desfazer
+   - Exemplo:
+     - Documento de texto
+     - Navegação de browser
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Precisamos permitir que o usuário construa um carrinho de compras simples
+     - É necessario disponibilizar um registro dos estados anteriores do carrinho, e permitir desfazer uma operação, além de permitir restaurar um estado anterior.
+   - Sobre o Memento
+     - Propõe a criação de alguns objetos para permitir o gerenciamento do estado atual e de acesso aos anteriores, permitindo operações como "restaurar" e "desfazer"
+       - Originador: contém o estado atual, e pode criar snaphots e restaurar o estado
+       - Memento: representa um estado em um certo momento
+       - Caretaker: armazena o historico de estados através de uma coleção interna, e interage com o Originator
