@@ -848,3 +848,13 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
      - Propõe a criação de uma superclasse que define os passos de um algoritmo em especifico, permitindo que uma ou mais operações dela possam ser sobreescritas em classes filhas
      - Com isso, podemos utilizar as implementações da superclasse para o passo a. estração de dados, mas personalizar a implementação de b. separar o estoque e c. notificação da operação
      - Podemos definir qual classe utilizar através de uma estrutura if-else, ou mesmo um Factory Method, por exemplo
+       
+### Visitor
+ - O problema
+   - Complexidade em se executar uma operação em uma lista de objetos diferentes da mesma classe Pai
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Precisamos Processar uma lista de objetos de tipo IMarketingMessage, que podem ser de tipos concretos EmailMessage ou SmsMessage
+     - Precisamos executar um bloco de código especifico, mas ao usar o if-else na verificação de tipo concreto acabamos com código frágil
+   - Sobre o Visitor
+     - Propõe a criação de uma classe Visitor, que vai ter métodos para lidar com cada uma das classes filhas específicas que se deseja trabalhar. Em nosso caso, um método que recebe uma instÂncia de SmsMessage e outro para EmailMessage;
+     - Além disso, é proposta a criação de um método em cada classe filha ( em nosso caso, SmsMessage e EmailMessage) para "aceitar" o Visitor, executando o método específico dele;
