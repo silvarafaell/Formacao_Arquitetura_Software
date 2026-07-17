@@ -858,3 +858,29 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Sobre o Visitor
      - Propõe a criação de uma classe Visitor, que vai ter métodos para lidar com cada uma das classes filhas específicas que se deseja trabalhar. Em nosso caso, um método que recebe uma instÂncia de SmsMessage e outro para EmailMessage;
      - Além disso, é proposta a criação de um método em cada classe filha ( em nosso caso, SmsMessage e EmailMessage) para "aceitar" o Visitor, executando o método específico dele;
+     
+### Introdução às principais arquiteturas
+ - Com toda a bagagem técnica adquirida ao longo do treinamento, vamos concluir com este módulo onde vaõ ser apresentadas algumas característcas das principais arquiteturas de software utilizadas no mercado
+ - Vão ser abordadas tanto arquiteturas monolíticas (em camadas, como Arquitetura Limpa e Hexagonal) quanto distribuídas (Serverless, Orientadas a Eventos)
+ - Arquitetura de Microserviços não será abordada pois acredito que consumir um conteúdo/curso focado nela é o ideal, devido a sua complexidade e deversos aspectos
+ - Além disso, algumas arquiteturas que vamos abordar aqui podem ser utilizadas em conjunto com a arquitetura de microserviços
+ - Arquiteturas trabalham em conjunto com design patterns, princípios, boas praticas, e padrões arquiteturais para se obeter uma solução de software coesa e desacoplada, leível, e com boa manutenção e resiliência
+ - Monilítica x Distribuída
+   - Antes de começarmos a ver a parte mais especifica de cada uma das arquiteturas a serem discutidas, é importante entender as diferenças entre uma arquitetura monolítica e uma distribuída
+   - Afinal, é possivel utilizar uma arquitetura distribuída para o sistema, como Serverless ou Microsserviços, em em aplicações que fazem parte dele utilizar uma arquitetura monolítica, como a Arquitetura Hexagonal ou Arquitetura Limpa
+   - Na arquitetura monolítica temos uma única aplicação, e estamos preocupados em estruturá-la de maneira a resultar em um código desacoplado, legível, e de fácil manutenção
+     - Mais suscetível a se tornar um Big Ball of Mud
+   - Já em uma arquitetura distribuida temos duas ou mais aplicações que interagem entre si de forma a compor um sistema de software
+   - Um exemplo: podemos ter uma arquitetura de microserviços, onde cada microserviço utiliza uma arquitetura monolítica em especifica, como Arquitetura Limpa ou Arquitetura Hexagonal;
+   - Monolítico é um sistema que contém apenas uma aplicação que concentra todos os módulos e componentes
+     - Características principais
+       - Único Repositório e Stack de tecnologia principal único
+       - Publicação feita de maneira individual
+       - Ponto único de falha
+       - Tende a crescer bastante e se tornar uma Big Ball of Mud, se não forem tomados os devidos cuidados
+   - Um sistema duistribuído contém duas ou mais aplicações, tendo uma separação entre elas geralmente por módulos / Agregados (conceito do Domain-Driven Design)
+     - Características Principais
+       - Multiplos repositórios, geralmente um por aplicação, além de possibilitar utilizar tecnologias diferentes por aplicação
+       - Publicação feita de maneira individual por aplicação que compõe o sistema
+       - Não apresenta um ponto único de falha, quando desacoplada apropriadamente
+       - Tende a ter um crescimento menor de código, por ter escopo menor
