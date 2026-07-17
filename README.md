@@ -818,3 +818,17 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Propõe a criação de uma classe State para cada um dos possíveis estados de um objeto
    - Nesse caso, seriam extraídos os comportametnos especificos da classe original para cada um de seus States
    - Além disso, também seria criada uma classe Context que mantém uma instância de classe State
+   
+### Strategy
+ - O problema
+   - Estruturar implementações diferentes (algoritmos) que resolvem o mesmo problema e definir qual utilizar
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Vamos definir qual serviço de pagamento (cartão de crédito ou boleto) utilizar para processar um pagamento
+     - Note que já fizemos algo similar, mas utilizando o padrão Factory Method, a diferença entre as abordagens será explicado nesta aula
+   - Sobre o Strategy
+     - Propõe a criação de uma classe para cada algoritmo, chamada de Strategy
+     - Também propõe a criação de uma classe de uma classe Context, que é responsável por receber a estratégia a ser utilizada via parâmetro de um método para definição de estratégia
+     - Reforçando a diferença entre Padrões Criacionais (como o Factory Method) e Comportamentais (como o Strategy)
+       - Padrões criacionais focam em criação (instância) de objetos e componentes
+       - Padrões comportamentais focam em estruturação e personalização de comportamentos
+       - Inclusive, podemos utilizar o padrão Factory Method para decidir qual Strategy Instanciar, combinando ambos padrões!
