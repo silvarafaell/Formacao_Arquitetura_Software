@@ -832,3 +832,19 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
        - Padrões criacionais focam em criação (instância) de objetos e componentes
        - Padrões comportamentais focam em estruturação e personalização de comportamentos
        - Inclusive, podemos utilizar o padrão Factory Method para decidir qual Strategy Instanciar, combinando ambos padrões!
+       
+### Template Method
+ - O problema
+   - Complexidade e duplicação de código de classes que realizam os mesmos passos, mas alguns de maneira diferente, outros não;
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Após a confirmação de um pedido, precisamos realizar a separação do estoque no armazém. Serão extraídos os dados importantes de  um pedido, como produto e quantidade, sendo então separados (podendo ser próprio ou externo) e finalmente notificando outros componentes que podem ter interesse nessa informação
+   - Vemos então três operações:
+     - a.  Extração de dados importantes
+     - b. Separação de estoque
+     - c. Notificação
+   - Imagine que a operação a. é similar entre as duas classes que as implementam, mas a b. e c. precisam ter uma implementação diferente, dependendo se são produtos próprios ou externos
+   - Como estruturar isso para evitar complexidade e duplicação de código ?
+   - Sobre o Template Method
+     - Propõe a criação de uma superclasse que define os passos de um algoritmo em especifico, permitindo que uma ou mais operações dela possam ser sobreescritas em classes filhas
+     - Com isso, podemos utilizar as implementações da superclasse para o passo a. estração de dados, mas personalizar a implementação de b. separar o estoque e c. notificação da operação
+     - Podemos definir qual classe utilizar através de uma estrutura if-else, ou mesmo um Factory Method, por exemplo
