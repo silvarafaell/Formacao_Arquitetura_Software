@@ -705,3 +705,156 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
     - Propõe a criação de uma classe Factory que seria a responsavel por garantir que as instâncias de objetos comuns de uso não sejam criadas de maneira desnecessaria e repetida
     - Vemos aqui uma similariedade com outro Design Pattern: Singleton
       - Enquanto o Singleton se refere a um único objeto, O Flyweight se refere a vários. Inclusive, o objeto Factory do Flyweight pode ser criado através do Padrão Singleton.
+
+### O que são Design Patterns de tipo Behavioral
+ - Design Patterns que lidam com a comunicação e comportamento de uma classe em relação a outra
+ - Alguns exemplos disso são:
+   - Redução de dependências entre objetos
+   - Notificação de eventos para objetos inscritos
+   - Definição e execução de famílias de algoritmos
+ - Chain of Responsibility
+ - Command
+ - Iterator
+ - Mediator
+ - Memento
+ - Observer
+ - State
+ - Strategy
+ - Template Method
+ - Visitor
+ 
+ - Lembrete
+   - Um padrão descreve um problema comum e descreve uma maneira de resolvê-lo utilizando uma abordagem replicável em diversas situações
+   - Um design pattern, seguindo o conceito de padrão, descreve uma solução aplicável a problemas comuns encontrados durante implementação
+   - Dependendo do contexto, vai necessitar de adaptação em seu uso.
+
+### Chain of Responsibility
+ - O problema
+   - Complexidade de código de execução uma sequência de passos para uma dada tarefa
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Para aprovar um pedido, precisamos realizar uma série de passos. Por exemplo, precisamos confirmar o status do cliente ( está bloqueado ? ), o estoque do produto, e também realizar um checagem para fraude com base no dados do CPF e compra
+     - Em caso de uma falha no processo, não é necessario seguir.
+     - Um código que realiza algo do tipo é apresentado a seguir
+     - Note que esse código é fragil, e que novas checagens vão aumentando a complexidade e dificuldade de manutenção do código, diminuindo sua legibilidade
+   - Sobre o Chain of Responsibility
+     - Propõe a criação de um objeto Handler, que será responsável por definir os passos e executá-los na ordem correta, controlando o fluxo
+     - Basicamente, o Handler armazena o próximo objeto que pode executar a tarefa, executando a tarefa, e analisando cada resposta, invocando então o próximo da sequência
+     - Interrompe o processamento em caso de resposta de falha, que pode variar de cada implementação
+     
+### Command
+ - O problema
+   - Chamadas de métodos com múltiplos parâmetros ou necessidade de armazenamento de parÂmetnros de uma dada operação para posterior execução
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Atualmente passamos os parÂmetros diretamente ao nosso método de checagem, que é basicamente um Façade para um serviço terceiro
+     - Temos a necessidade de realizar a chamda de checagem de fraude na criação de pedido de maneira assíncrona, via mensageria
+     - Também gostariamos de armazenar essa mensagem em nossos logs, para fins de auditoria posterior.
+   - Sobre o Command
+     - Propõe a transformação de parâmetros de uma chamada em um objeto que contém todas suas informações sobre ela
+     - Com isso, é possivel armazenar esse objeto para posterior processamento da chamada, por exemplo via fila ou agendamento, e também armazenar em logs
+
+### Iterator
+ - O problema
+   - Acoplamento com o método de travessiade coleções diferentes
+   - Quando precisamos percorrer uma coleção, muitas vezes ocorre o acoplamento com o método de travessia, já que cada coleção tem sua própria maneira de percorrer, como em Fila,Pilha, estruturas de Arvore, entre outras
+ - Em noss caso, vamos utilizar o seguinte exemplo:
+   - Precisamos percorrer uma lista de clientes bloqueados e realizar uma certa ação, como notificar seus e-mails
+   - Porém, para isso, não podemos expor a estrutura interna de um modelo que já estamos utilizando. No caso, estamos internamente utilizando um dicionário para armazenar os clientes e seus e-mails
+ - Sobre o Iterator
+   - Propõe que a criação de um objeto Iterator (ou a extensão da classe que contém a estrutura de dados atual) para permitir a travessia de seus objetos sem expor a implementação interna
+   - Por exemplo, com isso seria possivel percorrer os dados de um dicionário interno de um objeto sem precisar conhecer sua implementação interna, percorrendo como se fosse uma lista
+   
+### Mediator
+ - O problema
+   - Estrutura e fluxo similar entre implementações, existindo um forte acoplamento com componentes (interfaces e implementações) similares
+   - Exemplo:
+     - Comum de se encontrar emm aplicações que utilizam abstrações para o caso de uso, como serviços de camada de aplicação ( Arquitetura Limpa), CQRS, entre outros
+     - O problema é que Action do ASP.NET Core, precisa saber qual classe/interface e método especifico precisa invocar.
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Queremos utilizar o padrão CQRS em nosso projeto (poderia ser a Arquitetura Hexagonal, com UseCases)
+     - As Actions do nosso ProductController precisam saber qual Handler instanciar, e chamar o método Handle dele para conseguir o resultado desejado, havendo a comunicação direta
+     - Isso acopla nosso controller com cada um dos Handlers, tendo sempre que saber com qualidar dependendo do Query ou Command
+   - Sobre o Mediator
+     - Propõe a criação de um objeto Mediator, que será o responsável por delegar para o componente correspondente, removendo as comunicações diretas
+     - Um contra desse padrão é a alta concentração de responsabilidade no objeto Mediator (God Object)
+     
+### Memento
+ - O problema
+   - Dificuldade em gerenciar estados anteriores de um objeto, através de operações como restaurar ou desfazer
+   - Exemplo:
+     - Documento de texto
+     - Navegação de browser
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Precisamos permitir que o usuário construa um carrinho de compras simples
+     - É necessario disponibilizar um registro dos estados anteriores do carrinho, e permitir desfazer uma operação, além de permitir restaurar um estado anterior.
+   - Sobre o Memento
+     - Propõe a criação de alguns objetos para permitir o gerenciamento do estado atual e de acesso aos anteriores, permitindo operações como "restaurar" e "desfazer"
+       - Originador: contém o estado atual, e pode criar snaphots e restaurar o estado
+       - Memento: representa um estado em um certo momento
+       - Caretaker: armazena o historico de estados através de uma coleção interna, e interage com o Originator
+
+### Observer
+ - O problema
+   - Necessidade de notificar objetos sobre ocorrências importantes, como alteração de estado de outro objeto/execução de uma operação
+   - Por exemplo
+     - Notificar usuários quando configuração de termo de uso ou ofertas do dia (Singleton) for alterada
+     - Enviar dados para uma API de análise de dados quando o usuário adicionar um item ao carrinho (armazenamento em memória, coo Singleton), além de agendar um e-mail
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Queremos notificar o usuário quando a lista de ofertas do dia for alterada. Ela está sendo armazenada como um objeto na memória
+     - Nesse caso, precisaremos adicionar lógica quando ocorra a alteração. Por exemplo, inicialmente podemos notificar por e-mail, mas precisamos ter flexibilidade para adicionar novas operações de maneira isolada as existentes
+   - Sobre o Observer
+     - Propõe a criação de um objeto Subject e um ou mais Observer
+     - O Subject é responsável por notificar os objetos Observer que estão inscritos a ele
+     - Em nosso cenário, o objeto Subject manteria o estado das ofertas atuais, e os Observer seriam classes que executariam código toda vez que a oferta atual fosse modificada, como notificações
+     
+### State
+ - O problema
+   - Gerenciamento de estados de um objeto, que pode incluir lógica mais complexa e checagens baseado em seu estado
+   - Por exemplo, um pedido de delivery pode estar em estado aberto, onde aceita atualizações, como mensagens entre cliente e o restaurante. Porém, não deveria permitir operações como avaliação!
+   - Porém, caso o pedido esteja finalizado, algumas operações não deveriam ser permitidas, como alterar o pedido ou enviar mensagem. Já outras devem estar liberadas, como avaliação do pedio/entrega/restaurante
+ - Conceito de Finite State Machine
+   - Em programação, é um modelo de computação composto por um ou mais estados
+   - Somente um estado pode estar ativo ao mesmo tempo, então é necessário alterar o estado caso a máquina/objeto queira realizar diferentes operações.
+ - Sobre o State
+   - Propõe a criação de uma classe State para cada um dos possíveis estados de um objeto
+   - Nesse caso, seriam extraídos os comportametnos especificos da classe original para cada um de seus States
+   - Além disso, também seria criada uma classe Context que mantém uma instância de classe State
+   
+### Strategy
+ - O problema
+   - Estruturar implementações diferentes (algoritmos) que resolvem o mesmo problema e definir qual utilizar
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Vamos definir qual serviço de pagamento (cartão de crédito ou boleto) utilizar para processar um pagamento
+     - Note que já fizemos algo similar, mas utilizando o padrão Factory Method, a diferença entre as abordagens será explicado nesta aula
+   - Sobre o Strategy
+     - Propõe a criação de uma classe para cada algoritmo, chamada de Strategy
+     - Também propõe a criação de uma classe de uma classe Context, que é responsável por receber a estratégia a ser utilizada via parâmetro de um método para definição de estratégia
+     - Reforçando a diferença entre Padrões Criacionais (como o Factory Method) e Comportamentais (como o Strategy)
+       - Padrões criacionais focam em criação (instância) de objetos e componentes
+       - Padrões comportamentais focam em estruturação e personalização de comportamentos
+       - Inclusive, podemos utilizar o padrão Factory Method para decidir qual Strategy Instanciar, combinando ambos padrões!
+       
+### Template Method
+ - O problema
+   - Complexidade e duplicação de código de classes que realizam os mesmos passos, mas alguns de maneira diferente, outros não;
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Após a confirmação de um pedido, precisamos realizar a separação do estoque no armazém. Serão extraídos os dados importantes de  um pedido, como produto e quantidade, sendo então separados (podendo ser próprio ou externo) e finalmente notificando outros componentes que podem ter interesse nessa informação
+   - Vemos então três operações:
+     - a.  Extração de dados importantes
+     - b. Separação de estoque
+     - c. Notificação
+   - Imagine que a operação a. é similar entre as duas classes que as implementam, mas a b. e c. precisam ter uma implementação diferente, dependendo se são produtos próprios ou externos
+   - Como estruturar isso para evitar complexidade e duplicação de código ?
+   - Sobre o Template Method
+     - Propõe a criação de uma superclasse que define os passos de um algoritmo em especifico, permitindo que uma ou mais operações dela possam ser sobreescritas em classes filhas
+     - Com isso, podemos utilizar as implementações da superclasse para o passo a. estração de dados, mas personalizar a implementação de b. separar o estoque e c. notificação da operação
+     - Podemos definir qual classe utilizar através de uma estrutura if-else, ou mesmo um Factory Method, por exemplo
+       
+### Visitor
+ - O problema
+   - Complexidade em se executar uma operação em uma lista de objetos diferentes da mesma classe Pai
+   - Em nosso caso, vamos utilizar o seguinte exemplo:
+     - Precisamos Processar uma lista de objetos de tipo IMarketingMessage, que podem ser de tipos concretos EmailMessage ou SmsMessage
+     - Precisamos executar um bloco de código especifico, mas ao usar o if-else na verificação de tipo concreto acabamos com código frágil
+   - Sobre o Visitor
+     - Propõe a criação de uma classe Visitor, que vai ter métodos para lidar com cada uma das classes filhas específicas que se deseja trabalhar. Em nosso caso, um método que recebe uma instÂncia de SmsMessage e outro para EmailMessage;
+     - Além disso, é proposta a criação de um método em cada classe filha ( em nosso caso, SmsMessage e EmailMessage) para "aceitar" o Visitor, executando o método específico dele;
