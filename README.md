@@ -884,3 +884,32 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
        - Publicação feita de maneira individual por aplicação que compõe o sistema
        - Não apresenta um ponto único de falha, quando desacoplada apropriadamente
        - Tende a ter um crescimento menor de código, por ter escopo menor
+       
+### Arquitetura Hexagonal
+ - Arquitetura em camadas (Layered Architectures) tem como objetivo separar uma aplicação em diferentes camadas, onde cada uma teria classes e módulos com responsabilidades similares (coesas)
+ - Arquitetura Hexagonal, ou Ports and Adapters, é uma arquitetura que tem como foco desacoplar a implementação de casos de uso dos detalhes externos
+ - Implementação de casos de uso interagem com serviços e entidades, e regras de negócio são descritas através de Entidades, Agregados, Value Objects, e Serviços de Domínios, por exemplo
+ - Ports se referem a forma de comunicação externa, como um endpoint definido através de um Controller e Action
+ - Adapters contém implementações de acesso a dados, APIs externas, serviços de infraestrutura e etc
+ - Em seu livro, Eric Evans propõe uma arquitetura de 4 camadas, existindo uma separação entre a camada Domain e UI, Application e Infraestructure
+ - Domain é totalmente independente de camadas e frameworks
+ - Application depende na Domain, mas também é independente de frameworks e tecnologias de bancos de dados
+ - A UI depende da Application e utiliza a infrastructure de maneira indireta (DIP)
+ - Princípio de Inversão de Dependência tem um papel fundamental em desacoplar a camada Application da implementação de Repositórios e outros serviços com implementação na Infrastructure que ela possa usar.
+   - High-level modules should not depend on low-level modules. Both should depend on abstractions
+ - Camada UI (API, no nosso caso)
+   - Definição dos endpoints (Controllers e Actions)
+   - Filters e Middlewares
+ - Camada Application
+   - Use Cases, Input e Output, Presenter
+ - Camada Infrastructure
+   - Repositórios
+   - Acesso a APIs e serviços externos (Cloud, serviços de infraestrutura, etc)
+ - Camada Domain
+   - Entidades
+   - Agregados
+   - Value Objects
+   - Serviços (Domain Services)
+   - Factories
+   - Eventos de domínio Repositórios (interface)
+   - Exceções de domínio
