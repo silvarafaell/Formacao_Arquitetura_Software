@@ -985,3 +985,34 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Desafios
      - Tratamento de eventos duplicados
      - Mapeamento e Alinhamento de fluxos de processamentos
+     
+### Arquitetura Serverless
+ - Serverless é um modelo de desenvolvimento baseado em Cloud que permite construir e executar aplicações sem precisar gerenciar servidores
+ - Claro que ainda existem servidores onde essas aplicações são executadas, mas a questão é que seu gerenciamento é abstraído
+ - O provedor de nuvem, como Microsoft Azure ou AWS, cuidam de tarefas como gerenciamento, manutenção e escala da infraestrutura, enquanto os desenvolvedores focam naquilo que são melhores: desenvolver
+ - Outra caracteristica de aplicações Serverless é que elas escalam automaticamnete baseado na demanda, sendo seus recursos cobrados apena quando em uso
+ - Aplicações Serverless são constituidas por funções, que são basicamente mini-aplicações que executam apenas um bloco de código
+ - O Microsoft Azure tem o serviço Azure Fuctions para isso
+ - Por exemplo, em uma API, criaríamos uma função para cada "endpoint", coo GET e POST, por exemplo
+ - Ou seja, é possivel construir uma arquitetura orientada a eventos através de uma arquitetura Serverless
+ 
+### Padrões Arquiteturais
+ - CRRS
+   - Sigla de Command and Query Responsability Segregation
+   - Padrão arquitetural que tem como proposta separar as responsabilidades de consulta (Query) e comandos (Command)
+   - Consultas visam buscar dados, não atulizando o estado do sistema
+   - Por outro lado, comandos atualizam o estado do sistema
+   - É possivel utilizar tanto um banco de dados para ambas as operações trabalharem, ou um para cada, resultando em dois modelos de dados separados
+   - Por exemplo, podemos utilizar o SQL Server coo banco de leitura, e o MongoDB como banco de escrita
+   - A atualização do banco de dados de leitura pode ser feita via eventos capturados tanto em memória quanto através de mensageria/event streaming com ferramentas como RabbitMQ ou Apache Kafka, por exemplo
+ - Respository
+   - Com origem no Domain-Driven Design, esse padrão propõe a criação de objetos, chamados Repositories, que gerenciam coleção de dados persistidos
+   - Note que Repositories são agnosticos a tecnologia utilizada, permitindo o uso de um banco de dados, cache de memória, arquivo ou qualquer outra fonte
+   - Entre seus principais beneficios, principalmente quando utilizado com interface estão:
+     - Separação de responsabilidade de acesso a dados
+     - Menor acoplamento
+     - Melhor testabilidade
+ - Event Sourcing
+   - Padrão arquitetural que tem como proposta a ideia de que alterações no estado de um objeto (ou mesmo sistema) devem ser armazenadas como uma sequencia de eventos, ao invés de existir de um estado único para ele;
+   - Através dessa sequencia de eventos é possivel reconstruir o estado do objeto em um determinado momento de tempo, até mesmo reverter um estado caso seja permitindo
+   - Também facilita o processo de auditoria por ter um histórico de alterações.
