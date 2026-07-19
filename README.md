@@ -949,3 +949,39 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
      - Controllers
      - Filters
      - Outros recursos do frameworks Web
+     
+### Arquitetura Orientada a Eventos (EDA)
+ - O jeito tradicional de comunicação ente sistemas é o chamado Request-Response
+ - Nele, um cliente (computador ou aplicação) realiza uma requisição, e o servidor responde com os dados pedidos
+ - Enquanto o servidor tiver a capacidade de responder as requisições em tempo hábito, esse modelo atende muito bem
+ - 1. O usuário adiciona itens ao carrinho e decide finalizar a compra
+ - 2. A página de chechout carrega
+ - 3. O usuário preenche os dados de pagamento
+ - 4. Devido a uma instabilidade do serviço de pagamento, a requisição falha e o pedido não é concluido!
+ - 5. Mesmo os dados de compra estando corretos, o usuário recebe a mensagem de erro e desiste da compra!
+ - Um evento, derivado da mesma nomenclatura do Domain-Driven Design, é uma ocorrência significativa do sistema, como uma alteração de uma entidade
+ - Alguns exemplos são
+   - Compra com um E-Commerce
+   - Cadastro de um usuário
+   - Pagamento de uma assinatura
+   - Publicação de um texto
+ - Baseado nesses eventos, algumas ações podem ser realizadas, como:
+   - Notificação por e-mail ou SMS ao cliente
+   - Sincronização de dados com outro sistema
+   - Notificação de inscritos em uma newsletter
+   - Proxima tarefa do fluxo, como o processamento de pagamento de um pedido ou separação de estoque
+   - Esteira de Dados
+ - Em uma arquitetura orientada a eventos, o sistema se utiliza de meios como mensageria para "reagir" a eventos publicados por seus componentes
+ - Baseado nesse processamento, novos eventos podem ser gerados como parte do fluxo
+ - É comum utilizar a arquitetura orientada a eventos em arquitetura distribuidas, pois ela reduz o acoplamento e melhore a resiliencia do sistema
+ - Mensageria
+   - Devido a comunicação sincrona dificultar a resiliencia em cenários de Microserviços (exigindo padrões como o Retry e o Circuit Breaker), a assíncrona geralmente é preferida
+   - Utilizando mensageria, é possivel publicar eventos como mensagens, contendo os dados relevantes e necessários, a um Message Broker (ou Kafka Cluster), por exemplo, que é um intermediário na comunicação assíncrona
+   - O Consumidor, ou consumidores, inscrito pode então receber a mensagem e processá-la
+   - Beneficios
+     - Maior resiliencia
+     - Menor acoplamento
+     - Maior facilidade de integração em questoes de esforço de desenvolvimento
+   - Desafios
+     - Tratamento de eventos duplicados
+     - Mapeamento e Alinhamento de fluxos de processamentos
