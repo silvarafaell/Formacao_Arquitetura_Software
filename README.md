@@ -913,3 +913,39 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Factories
    - Eventos de domínio Repositórios (interface)
    - Exceções de domínio
+   
+### Arquitetura Limpa
+ - Também conhecida como Orion Architecture, ou Arquitetura Cebola, é uma arquitetura amplamente utilizada em projetos .NET
+ - Tem como foco o domínio do sistema, tendo em sua essência o Domain-Drive Design. Apesar de diversas variações, a essência é a mesma
+ - Sua estrutura é dividida em 4 camadas principais, sendo elas
+   - Core
+   - Infrastructure
+   - Appliction
+   - API / UI
+ - Core
+   - Camada central da Clean Architecture, contexto a expressão em código do domínio do negócio
+   - Alguns conceitos e componentes do Domain-Driver Design são expressados aqui, como
+     - Entidades e Agregados
+     - Value Objects
+     - Repositorios (interface deles)
+     - Linguagem Ubíqua
+     - Enums relacionados a outros componentes dessa camada
+ - Infrastructure
+   - Camada responsável por integração com componentes de infraestrutura, como acesso a dados, caching, serviços de computação em nuvem, entre outros sistemas (externos ou internos a organização), entre outros
+   - Cada um dos sub-itens pode ser dividido em projetos proprios, coo Persistence, Integration, CloudServices, e Caching
+   - Principais componentes que geralmente estão contidos aqui são:
+     - Classes relacionadas a acesso a dados, como contexto de dados e implementação de Repositorios
+     - Serviços de Infraestrutura, que permite a integração com serviços anteriormente citados neste tópico.
+ - Application
+   - Camada responsável pela implementação de casos de uso, que poderá variar com o padrão arquitetural, como:
+     - Serviços de aplicação, caso siga com a abordagem padrão da Clean Architecture
+     - Commands e Queries, caso utilize o CQRS
+       - Em algumas implementações, as Queries são encontradas na camada infrastructure,lidando diretamente com a projeção de dados a partir da biblioteca utilizada para acesso a dados (como EF Core, Dapper, ADO. NET)
+ - API / UI
+   - Camada responsável pelo código de interface com outros componentes externos, como usuários ou aplicações
+   - Pode ser uma API (puramente back-end), ou mesmo conter Views, como em modelo MVC
+   - É configurada a parte de injeção de dependência
+   - Principais componentes que geralmente estão contidos aqui são:
+     - Controllers
+     - Filters
+     - Outros recursos do frameworks Web
