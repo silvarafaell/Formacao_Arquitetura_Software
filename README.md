@@ -858,3 +858,189 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Sobre o Visitor
      - Propõe a criação de uma classe Visitor, que vai ter métodos para lidar com cada uma das classes filhas específicas que se deseja trabalhar. Em nosso caso, um método que recebe uma instÂncia de SmsMessage e outro para EmailMessage;
      - Além disso, é proposta a criação de um método em cada classe filha ( em nosso caso, SmsMessage e EmailMessage) para "aceitar" o Visitor, executando o método específico dele;
+     
+### Introdução às principais arquiteturas
+ - Com toda a bagagem técnica adquirida ao longo do treinamento, vamos concluir com este módulo onde vaõ ser apresentadas algumas característcas das principais arquiteturas de software utilizadas no mercado
+ - Vão ser abordadas tanto arquiteturas monolíticas (em camadas, como Arquitetura Limpa e Hexagonal) quanto distribuídas (Serverless, Orientadas a Eventos)
+ - Arquitetura de Microserviços não será abordada pois acredito que consumir um conteúdo/curso focado nela é o ideal, devido a sua complexidade e deversos aspectos
+ - Além disso, algumas arquiteturas que vamos abordar aqui podem ser utilizadas em conjunto com a arquitetura de microserviços
+ - Arquiteturas trabalham em conjunto com design patterns, princípios, boas praticas, e padrões arquiteturais para se obeter uma solução de software coesa e desacoplada, leível, e com boa manutenção e resiliência
+ - Monilítica x Distribuída
+   - Antes de começarmos a ver a parte mais especifica de cada uma das arquiteturas a serem discutidas, é importante entender as diferenças entre uma arquitetura monolítica e uma distribuída
+   - Afinal, é possivel utilizar uma arquitetura distribuída para o sistema, como Serverless ou Microsserviços, em em aplicações que fazem parte dele utilizar uma arquitetura monolítica, como a Arquitetura Hexagonal ou Arquitetura Limpa
+   - Na arquitetura monolítica temos uma única aplicação, e estamos preocupados em estruturá-la de maneira a resultar em um código desacoplado, legível, e de fácil manutenção
+     - Mais suscetível a se tornar um Big Ball of Mud
+   - Já em uma arquitetura distribuida temos duas ou mais aplicações que interagem entre si de forma a compor um sistema de software
+   - Um exemplo: podemos ter uma arquitetura de microserviços, onde cada microserviço utiliza uma arquitetura monolítica em especifica, como Arquitetura Limpa ou Arquitetura Hexagonal;
+   - Monolítico é um sistema que contém apenas uma aplicação que concentra todos os módulos e componentes
+     - Características principais
+       - Único Repositório e Stack de tecnologia principal único
+       - Publicação feita de maneira individual
+       - Ponto único de falha
+       - Tende a crescer bastante e se tornar uma Big Ball of Mud, se não forem tomados os devidos cuidados
+   - Um sistema duistribuído contém duas ou mais aplicações, tendo uma separação entre elas geralmente por módulos / Agregados (conceito do Domain-Driven Design)
+     - Características Principais
+       - Multiplos repositórios, geralmente um por aplicação, além de possibilitar utilizar tecnologias diferentes por aplicação
+       - Publicação feita de maneira individual por aplicação que compõe o sistema
+       - Não apresenta um ponto único de falha, quando desacoplada apropriadamente
+       - Tende a ter um crescimento menor de código, por ter escopo menor
+       
+### Arquitetura Hexagonal
+ - Arquitetura em camadas (Layered Architectures) tem como objetivo separar uma aplicação em diferentes camadas, onde cada uma teria classes e módulos com responsabilidades similares (coesas)
+ - Arquitetura Hexagonal, ou Ports and Adapters, é uma arquitetura que tem como foco desacoplar a implementação de casos de uso dos detalhes externos
+ - Implementação de casos de uso interagem com serviços e entidades, e regras de negócio são descritas através de Entidades, Agregados, Value Objects, e Serviços de Domínios, por exemplo
+ - Ports se referem a forma de comunicação externa, como um endpoint definido através de um Controller e Action
+ - Adapters contém implementações de acesso a dados, APIs externas, serviços de infraestrutura e etc
+ - Em seu livro, Eric Evans propõe uma arquitetura de 4 camadas, existindo uma separação entre a camada Domain e UI, Application e Infraestructure
+ - Domain é totalmente independente de camadas e frameworks
+ - Application depende na Domain, mas também é independente de frameworks e tecnologias de bancos de dados
+ - A UI depende da Application e utiliza a infrastructure de maneira indireta (DIP)
+ - Princípio de Inversão de Dependência tem um papel fundamental em desacoplar a camada Application da implementação de Repositórios e outros serviços com implementação na Infrastructure que ela possa usar.
+   - High-level modules should not depend on low-level modules. Both should depend on abstractions
+ - Camada UI (API, no nosso caso)
+   - Definição dos endpoints (Controllers e Actions)
+   - Filters e Middlewares
+ - Camada Application
+   - Use Cases, Input e Output, Presenter
+ - Camada Infrastructure
+   - Repositórios
+   - Acesso a APIs e serviços externos (Cloud, serviços de infraestrutura, etc)
+ - Camada Domain
+   - Entidades
+   - Agregados
+   - Value Objects
+   - Serviços (Domain Services)
+   - Factories
+   - Eventos de domínio Repositórios (interface)
+   - Exceções de domínio
+   
+### Arquitetura Limpa
+ - Também conhecida como Orion Architecture, ou Arquitetura Cebola, é uma arquitetura amplamente utilizada em projetos .NET
+ - Tem como foco o domínio do sistema, tendo em sua essência o Domain-Drive Design. Apesar de diversas variações, a essência é a mesma
+ - Sua estrutura é dividida em 4 camadas principais, sendo elas
+   - Core
+   - Infrastructure
+   - Appliction
+   - API / UI
+ - Core
+   - Camada central da Clean Architecture, contexto a expressão em código do domínio do negócio
+   - Alguns conceitos e componentes do Domain-Driver Design são expressados aqui, como
+     - Entidades e Agregados
+     - Value Objects
+     - Repositorios (interface deles)
+     - Linguagem Ubíqua
+     - Enums relacionados a outros componentes dessa camada
+ - Infrastructure
+   - Camada responsável por integração com componentes de infraestrutura, como acesso a dados, caching, serviços de computação em nuvem, entre outros sistemas (externos ou internos a organização), entre outros
+   - Cada um dos sub-itens pode ser dividido em projetos proprios, coo Persistence, Integration, CloudServices, e Caching
+   - Principais componentes que geralmente estão contidos aqui são:
+     - Classes relacionadas a acesso a dados, como contexto de dados e implementação de Repositorios
+     - Serviços de Infraestrutura, que permite a integração com serviços anteriormente citados neste tópico.
+ - Application
+   - Camada responsável pela implementação de casos de uso, que poderá variar com o padrão arquitetural, como:
+     - Serviços de aplicação, caso siga com a abordagem padrão da Clean Architecture
+     - Commands e Queries, caso utilize o CQRS
+       - Em algumas implementações, as Queries são encontradas na camada infrastructure,lidando diretamente com a projeção de dados a partir da biblioteca utilizada para acesso a dados (como EF Core, Dapper, ADO. NET)
+ - API / UI
+   - Camada responsável pelo código de interface com outros componentes externos, como usuários ou aplicações
+   - Pode ser uma API (puramente back-end), ou mesmo conter Views, como em modelo MVC
+   - É configurada a parte de injeção de dependência
+   - Principais componentes que geralmente estão contidos aqui são:
+     - Controllers
+     - Filters
+     - Outros recursos do frameworks Web
+     
+### Arquitetura Orientada a Eventos (EDA)
+ - O jeito tradicional de comunicação ente sistemas é o chamado Request-Response
+ - Nele, um cliente (computador ou aplicação) realiza uma requisição, e o servidor responde com os dados pedidos
+ - Enquanto o servidor tiver a capacidade de responder as requisições em tempo hábito, esse modelo atende muito bem
+ - 1. O usuário adiciona itens ao carrinho e decide finalizar a compra
+ - 2. A página de chechout carrega
+ - 3. O usuário preenche os dados de pagamento
+ - 4. Devido a uma instabilidade do serviço de pagamento, a requisição falha e o pedido não é concluido!
+ - 5. Mesmo os dados de compra estando corretos, o usuário recebe a mensagem de erro e desiste da compra!
+ - Um evento, derivado da mesma nomenclatura do Domain-Driven Design, é uma ocorrência significativa do sistema, como uma alteração de uma entidade
+ - Alguns exemplos são
+   - Compra com um E-Commerce
+   - Cadastro de um usuário
+   - Pagamento de uma assinatura
+   - Publicação de um texto
+ - Baseado nesses eventos, algumas ações podem ser realizadas, como:
+   - Notificação por e-mail ou SMS ao cliente
+   - Sincronização de dados com outro sistema
+   - Notificação de inscritos em uma newsletter
+   - Proxima tarefa do fluxo, como o processamento de pagamento de um pedido ou separação de estoque
+   - Esteira de Dados
+ - Em uma arquitetura orientada a eventos, o sistema se utiliza de meios como mensageria para "reagir" a eventos publicados por seus componentes
+ - Baseado nesse processamento, novos eventos podem ser gerados como parte do fluxo
+ - É comum utilizar a arquitetura orientada a eventos em arquitetura distribuidas, pois ela reduz o acoplamento e melhore a resiliencia do sistema
+ - Mensageria
+   - Devido a comunicação sincrona dificultar a resiliencia em cenários de Microserviços (exigindo padrões como o Retry e o Circuit Breaker), a assíncrona geralmente é preferida
+   - Utilizando mensageria, é possivel publicar eventos como mensagens, contendo os dados relevantes e necessários, a um Message Broker (ou Kafka Cluster), por exemplo, que é um intermediário na comunicação assíncrona
+   - O Consumidor, ou consumidores, inscrito pode então receber a mensagem e processá-la
+   - Beneficios
+     - Maior resiliencia
+     - Menor acoplamento
+     - Maior facilidade de integração em questoes de esforço de desenvolvimento
+   - Desafios
+     - Tratamento de eventos duplicados
+     - Mapeamento e Alinhamento de fluxos de processamentos
+     
+### Arquitetura Serverless
+ - Serverless é um modelo de desenvolvimento baseado em Cloud que permite construir e executar aplicações sem precisar gerenciar servidores
+ - Claro que ainda existem servidores onde essas aplicações são executadas, mas a questão é que seu gerenciamento é abstraído
+ - O provedor de nuvem, como Microsoft Azure ou AWS, cuidam de tarefas como gerenciamento, manutenção e escala da infraestrutura, enquanto os desenvolvedores focam naquilo que são melhores: desenvolver
+ - Outra caracteristica de aplicações Serverless é que elas escalam automaticamnete baseado na demanda, sendo seus recursos cobrados apena quando em uso
+ - Aplicações Serverless são constituidas por funções, que são basicamente mini-aplicações que executam apenas um bloco de código
+ - O Microsoft Azure tem o serviço Azure Fuctions para isso
+ - Por exemplo, em uma API, criaríamos uma função para cada "endpoint", coo GET e POST, por exemplo
+ - Ou seja, é possivel construir uma arquitetura orientada a eventos através de uma arquitetura Serverless
+ 
+### Padrões Arquiteturais
+ - CRRS
+   - Sigla de Command and Query Responsability Segregation
+   - Padrão arquitetural que tem como proposta separar as responsabilidades de consulta (Query) e comandos (Command)
+   - Consultas visam buscar dados, não atulizando o estado do sistema
+   - Por outro lado, comandos atualizam o estado do sistema
+   - É possivel utilizar tanto um banco de dados para ambas as operações trabalharem, ou um para cada, resultando em dois modelos de dados separados
+   - Por exemplo, podemos utilizar o SQL Server coo banco de leitura, e o MongoDB como banco de escrita
+   - A atualização do banco de dados de leitura pode ser feita via eventos capturados tanto em memória quanto através de mensageria/event streaming com ferramentas como RabbitMQ ou Apache Kafka, por exemplo
+ - Respository
+   - Com origem no Domain-Driven Design, esse padrão propõe a criação de objetos, chamados Repositories, que gerenciam coleção de dados persistidos
+   - Note que Repositories são agnosticos a tecnologia utilizada, permitindo o uso de um banco de dados, cache de memória, arquivo ou qualquer outra fonte
+   - Entre seus principais beneficios, principalmente quando utilizado com interface estão:
+     - Separação de responsabilidade de acesso a dados
+     - Menor acoplamento
+     - Melhor testabilidade
+ - Event Sourcing
+   - Padrão arquitetural que tem como proposta a ideia de que alterações no estado de um objeto (ou mesmo sistema) devem ser armazenadas como uma sequencia de eventos, ao invés de existir de um estado único para ele;
+   - Através dessa sequencia de eventos é possivel reconstruir o estado do objeto em um determinado momento de tempo, até mesmo reverter um estado caso seja permitindo
+   - Também facilita o processo de auditoria por ter um histórico de alterações.
+   
+### Domain-Driven Design (DDD)
+ - O que é Domain-Driven Desing
+   - Abordagem de desenvolvimento orientado ao domínio do negócio, alinhado a sua linguagem e termos ao software escrito
+   - Termo apresentado por Eric Evans no livro "Domain-Driven Design: Tackling Complexity in the Heart of software"
+   - Não é uma arquitetura, nem força a utilização de uma em especifico
+ - Linguagem Ubíqua
+   - Também conhecida como linguagem Onipresente,é um termo usado por Erick Evans para descrever uma linguagem compartilhada pelo time
+   - Quando se fala em "time", estão incluídos desenvolvedores, designs, analistas e especialistas de negócio, gerentes, entre outros membros
+   - Porém, um cenário muito comum em projetos de software é ter programadores e outros membros distantes do cliente e negócio.
+   - A linguagem Ubíqua deve ser a única linguagem utilizada para expressar o modelo, sem ambiguidades ou tradução
+ - Entidade
+   - Objeto definido por sua identidade, com valor único
+   - Não é definida pelos seus atributos, que podem ser atualizados, sem a perda da identidade
+ - Value Objects
+   - Objeto definido pelos valores de suas propriedades, e não por apenas uma única
+   - Ao se comparar a outro, se um valor for diferente, serão considerados objetos diferentes
+ - Agregados
+   - Aglomerado de objetos do domínio (entidades e value objects) que podem ser tratados como uma unidade única
+   - Um dos seus componentes será a raiz do Agregado (Aggregate Root).A raiz do Agregado é muito importante pois garante a integridade do Agregado, tendo quaisquer referências de fora do agregado sendo feitas através dela
+ - Repositórios
+   - Padrão utilizado para realização de operações em conjuntos de informações, agnóstico a tecnologia utilizada
+   - Geralmente associado a um Agregado
+ - Contextos Delimitados
+   - Mapeia um subdominio para uma solução, contendo suas peculiaridades próprias na Linguagem Ubíqua para Entidades, Value Objects, entre outros componentes do domínio
+   - É um padrão central em Domain-Driven Design, lidando com grandes modelos e times, resultando em diferentes contextos Delimitados e definindo relacionamentos entre eles
+ - Mapeamento de Contextos
+   - O mapeamento de contextos auxilia na definição e visualização dos relacionametos entre contextos delimitados
