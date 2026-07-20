@@ -1016,3 +1016,31 @@ Curso Formação Arquitetura de Software no nextwave(LuisDEV)
    - Padrão arquitetural que tem como proposta a ideia de que alterações no estado de um objeto (ou mesmo sistema) devem ser armazenadas como uma sequencia de eventos, ao invés de existir de um estado único para ele;
    - Através dessa sequencia de eventos é possivel reconstruir o estado do objeto em um determinado momento de tempo, até mesmo reverter um estado caso seja permitindo
    - Também facilita o processo de auditoria por ter um histórico de alterações.
+   
+### Domain-Driven Design (DDD)
+ - O que é Domain-Driven Desing
+   - Abordagem de desenvolvimento orientado ao domínio do negócio, alinhado a sua linguagem e termos ao software escrito
+   - Termo apresentado por Eric Evans no livro "Domain-Driven Design: Tackling Complexity in the Heart of software"
+   - Não é uma arquitetura, nem força a utilização de uma em especifico
+ - Linguagem Ubíqua
+   - Também conhecida como linguagem Onipresente,é um termo usado por Erick Evans para descrever uma linguagem compartilhada pelo time
+   - Quando se fala em "time", estão incluídos desenvolvedores, designs, analistas e especialistas de negócio, gerentes, entre outros membros
+   - Porém, um cenário muito comum em projetos de software é ter programadores e outros membros distantes do cliente e negócio.
+   - A linguagem Ubíqua deve ser a única linguagem utilizada para expressar o modelo, sem ambiguidades ou tradução
+ - Entidade
+   - Objeto definido por sua identidade, com valor único
+   - Não é definida pelos seus atributos, que podem ser atualizados, sem a perda da identidade
+ - Value Objects
+   - Objeto definido pelos valores de suas propriedades, e não por apenas uma única
+   - Ao se comparar a outro, se um valor for diferente, serão considerados objetos diferentes
+ - Agregados
+   - Aglomerado de objetos do domínio (entidades e value objects) que podem ser tratados como uma unidade única
+   - Um dos seus componentes será a raiz do Agregado (Aggregate Root).A raiz do Agregado é muito importante pois garante a integridade do Agregado, tendo quaisquer referências de fora do agregado sendo feitas através dela
+ - Repositórios
+   - Padrão utilizado para realização de operações em conjuntos de informações, agnóstico a tecnologia utilizada
+   - Geralmente associado a um Agregado
+ - Contextos Delimitados
+   - Mapeia um subdominio para uma solução, contendo suas peculiaridades próprias na Linguagem Ubíqua para Entidades, Value Objects, entre outros componentes do domínio
+   - É um padrão central em Domain-Driven Design, lidando com grandes modelos e times, resultando em diferentes contextos Delimitados e definindo relacionamentos entre eles
+ - Mapeamento de Contextos
+   - O mapeamento de contextos auxilia na definição e visualização dos relacionametos entre contextos delimitados
